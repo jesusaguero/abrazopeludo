@@ -225,4 +225,4 @@
     </div>
 <!-- Sección de Testimonios -->
 
-    @extendes(layouts.footer)
+@extends('layouts.footer')

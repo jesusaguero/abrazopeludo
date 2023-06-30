@@ -164,5 +164,5 @@
 </div>
 
     <!-- Sección Equipo-->
-    
+
 @extends('layouts.footer')
