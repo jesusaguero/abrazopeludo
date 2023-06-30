@@ -82,7 +82,7 @@
                             <small class="mr-2"><i class="fa fa-user text-muted"></i>  Jesus Agüero</small>
                         </div>
                         <p>Después de meses en un refugio, Ben, un perro de raza mixta, finalmente encontró su hogar para siempre. Ahora, disfruta de largos paseos y de una familia amorosa que le brinda todo el cariño que se merece.</p>
-                        <a class="font-weight-bold" href="">Historias que nos dan vida.</a>
+                        <a class="font-weight-bold" >Historias que nos dan vida.</a>
                     </div>
                 </div>
             </div>
@@ -95,7 +95,7 @@
                             <small class="mr-2"><i class="fa fa-user text-muted"></i>  Bruno Chigne</small>
                         </div>
                         <p>Luna, una hermosa gata negra, fue adoptada recientemente por una pareja. Después de una breve adaptación, Luna ha demostrado ser una compañera leal y juguetona, llenando de alegría la vida de sus nuevos dueños.</p>
-                        <a class="font-weight-bold" href="">Historias que nos dan vida.</a>
+                        <a class="font-weight-bold" >Historias que nos dan vida.</a>
                     </div>
                 </div>
             </div>
@@ -108,7 +108,7 @@
                             <small class="mr-2"><i class="fa fa-user text-muted"></i> Edilson Huaman</small>
                         </div>
                         <p>Toby, un encantador perro de raza mixta, fue rescatado de la calle y ahora tiene una nueva familia. Su historia de superación y su energía inagotable han cautivado a sus adoptantes, quienes no podrían estar más felices.</p>
-                        <a class="font-weight-bold" href="">Historias que nos dan vida.</a>
+                        <a class="font-weight-bold" >Historias que nos dan vida.</a>
                     </div>
                 </div>
             </div>
@@ -121,7 +121,7 @@
                             <small class="mr-2"><i class="fa fa-user text-muted"></i> Jesus Agüero </small>
                         </div>
                         <p>Bella, una perrita abandonada, ha sido adoptada por una niña de ocho años. Desde el primer momento, han sido inseparables, formando un vínculo inquebrantable. Ahora, Bella es parte integral de la vida de esta valiente niña.</p>
-                        <a class="font-weight-bold" href="">Historias que nos dan vida.</a>
+                        <a class="font-weight-bold" >Historias que nos dan vida.</a>
                     </div>
                 </div>
             </div>
@@ -134,7 +134,7 @@
                             <small class="mr-2"><i class="fa fa-user text-muted"></i> Bruno Chigne</small>
                         </div>
                         <p>Max, un perro de raza Labrador, fue encontrado vagando solo en las calles. Afortunadamente, un amante de los animales decidió adoptarlo. Ahora, Max disfruta de un hogar cálido y seguro, retribuyendo el amor con su lealtad incondicional.</p>
-                        <a class="font-weight-bold" href="">Historias que nos dan vida.</a>
+                        <a class="font-weight-bold" >Historias que nos dan vida.</a>
                     </div>
                 </div>
             </div>
@@ -147,7 +147,7 @@
                             <small class="mr-2"><i class="fa fa-user text-muted"></i> Edilson Huaman</small>
                         </div>
                         <p>Oliver, un juguetón gatito atigrado, ha sido adoptado por una familia que siempre ha sido amante de los felinos. Su personalidad traviesa y sus ronroneos reconfortantes han conquistado el corazón de sus nuevos dueños.</p>
-                        <a class="font-weight-bold" href="">Historias que nos dan vida.</a>
+                        <a class="font-weight-bold" >Historias que nos dan vida.</a>
                     </div>
                 </div>
             </div>
