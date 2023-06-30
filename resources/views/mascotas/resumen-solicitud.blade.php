@@ -51,7 +51,7 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                 <div class="navbar-nav mr-auto py-0">
-                    <a href="../inicio" class="nav-item nav-link">Inicio</a>
+                    <a href="../home" class="nav-item nav-link">Inicio</a>
                     <a href="../nosotros" class="nav-item nav-link">Nosotros</a>
                     <a href="../adopta" class="nav-item nav-link active">Adopta</a>
                     <a href="../donacion" class="nav-item nav-link">Donación</a>
@@ -68,7 +68,7 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-3">
-                <a href="adopta" class="btn btn-lg btn-primary px-3 d-none d-lg-block">Volver a Adopta</a>
+                <a href="../adopta" class="btn btn-lg btn-primary px-3 d-none d-lg-block">Volver a Adopta</a>
             </div>
         </div>
         <div class="row mt-3">
