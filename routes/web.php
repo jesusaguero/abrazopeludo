@@ -62,6 +62,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/adopta', [App\Http\Controllers\HomeController::class, 'adopta'])->name('adopta');
 Route::get('/donacion', [App\Http\Controllers\HomeController::class, 'donacion'])->name('donacion');
 
-Route::resource('usuarios', UsuarioController::class);
 Route::resource('productos', ProductoController::class);
 Route::resource('donaciones', DonacionController::class);
