@@ -81,9 +81,10 @@ class ScheduleListCommand extends Command
             }
 
             if ($event instanceof CallbackEvent) {
-                $command = $event->getSummaryForDisplay();
-
-                if (in_array($command, ['Closure', 'Callback'])) {
+                if (class_exists($description)) {
+                    $command = $description;
+                    $description = '';
+                } else {
                     $command = 'Closure at: '.$this->getClosureLocation($event);
                 }
             }
@@ -195,7 +196,9 @@ class ScheduleListCommand extends Command
      */
     private function getClosureLocation(CallbackEvent $event)
     {
-        $callback = (new ReflectionClass($event))->getProperty('callback')->getValue($event);
+        $callback = tap((new ReflectionClass($event))->getProperty('callback'))
+                        ->setAccessible(true)
+                        ->getValue($event);
 
         if ($callback instanceof Closure) {
             $function = new ReflectionFunction($callback);

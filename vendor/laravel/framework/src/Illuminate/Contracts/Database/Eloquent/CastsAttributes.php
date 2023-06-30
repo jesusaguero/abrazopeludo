@@ -16,7 +16,7 @@ interface CastsAttributes
      * @param  \Illuminate\Database\Eloquent\Model  $model
      * @param  string  $key
      * @param  mixed  $value
-     * @param  array<string, mixed>  $attributes
+     * @param  array  $attributes
      * @return TGet|null
      */
     public function get(Model $model, string $key, mixed $value, array $attributes);
@@ -27,7 +27,7 @@ interface CastsAttributes
      * @param  \Illuminate\Database\Eloquent\Model  $model
      * @param  string  $key
      * @param  TSet|null  $value
-     * @param  array<string, mixed>  $attributes
+     * @param  array  $attributes
      * @return mixed
      */
     public function set(Model $model, string $key, mixed $value, array $attributes);

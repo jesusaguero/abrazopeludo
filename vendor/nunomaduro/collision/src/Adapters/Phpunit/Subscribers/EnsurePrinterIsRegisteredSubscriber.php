@@ -37,8 +37,6 @@ use PHPUnit\Event\Test\PhpWarningTriggered;
 use PHPUnit\Event\Test\PhpWarningTriggeredSubscriber;
 use PHPUnit\Event\Test\PreparationStarted;
 use PHPUnit\Event\Test\PreparationStartedSubscriber;
-use PHPUnit\Event\Test\PrintedUnexpectedOutput;
-use PHPUnit\Event\Test\PrintedUnexpectedOutputSubscriber;
 use PHPUnit\Event\Test\Skipped;
 use PHPUnit\Event\Test\SkippedSubscriber;
 use PHPUnit\Event\Test\WarningTriggered;
@@ -90,15 +88,6 @@ if (class_exists(Version::class) && (int) Version::series() >= 10) {
                         $this->printer()->setDecorated(
                             $event->configuration()->colors()
                         );
-                    }
-                },
-
-                // Test
-                new class($printer) extends Subscriber implements PrintedUnexpectedOutputSubscriber
-                {
-                    public function notify(PrintedUnexpectedOutput $event): void
-                    {
-                        $this->printer()->testPrintedUnexpectedOutput($event);
                     }
                 },
 

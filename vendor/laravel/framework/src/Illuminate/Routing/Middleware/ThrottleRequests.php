@@ -24,13 +24,6 @@ class ThrottleRequests
     protected $limiter;
 
     /**
-     * Indicates if the rate limiter keys should be hashed.
-     *
-     * @var bool
-     */
-    protected static $shouldHashKeys = true;
-
-    /**
      * Create a new request throttler.
      *
      * @param  \Illuminate\Cache\RateLimiter  $limiter
@@ -127,7 +120,7 @@ class ThrottleRequests
             $next,
             collect(Arr::wrap($limiterResponse))->map(function ($limit) use ($limiterName) {
                 return (object) [
-                    'key' => self::$shouldHashKeys ? md5($limiterName.$limit->key) : $limiterName.':'.$limit->key,
+                    'key' => md5($limiterName.$limit->key),
                     'maxAttempts' => $limit->maxAttempts,
                     'decayMinutes' => $limit->decayMinutes,
                     'responseCallback' => $limit->responseCallback,
@@ -200,9 +193,9 @@ class ThrottleRequests
     protected function resolveRequestSignature($request)
     {
         if ($user = $request->user()) {
-            return $this->formatIdentifier($user->getAuthIdentifier());
+            return sha1($user->getAuthIdentifier());
         } elseif ($route = $request->route()) {
-            return $this->formatIdentifier($route->getDomain().'|'.$request->ip());
+            return sha1($route->getDomain().'|'.$request->ip());
         }
 
         throw new RuntimeException('Unable to generate the request signature. Route unavailable.');
@@ -305,27 +298,5 @@ class ThrottleRequests
     protected function calculateRemainingAttempts($key, $maxAttempts, $retryAfter = null)
     {
         return is_null($retryAfter) ? $this->limiter->retriesLeft($key, $maxAttempts) : 0;
-    }
-
-    /**
-     * Format the given identifier based on the configured hashing settings.
-     *
-     * @param  string  $value
-     * @return string
-     */
-    private function formatIdentifier($value)
-    {
-        return self::$shouldHashKeys ? sha1($value) : $value;
-    }
-
-    /**
-     * Specify whether rate limiter keys should be hashed.
-     *
-     * @param  bool  $shouldHashKeys
-     * @return void
-     */
-    public static function shouldHashKeys(bool $shouldHashKeys = true)
-    {
-        self::$shouldHashKeys = $shouldHashKeys;
     }
 }

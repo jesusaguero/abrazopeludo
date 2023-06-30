@@ -236,21 +236,11 @@ class TestCommand extends Command
                 && ! Str::startsWith($option, '--min');
         }));
 
-        return array_merge($this->commonArguments(), ['--configuration='.$this->getConfigurationFile()], $options);
-    }
-
-    /**
-     * Get the configuration file.
-     *
-     * @return string
-     */
-    protected function getConfigurationFile()
-    {
         if (! file_exists($file = base_path('phpunit.xml'))) {
             $file = base_path('phpunit.xml.dist');
         }
 
-        return $file;
+        return array_merge($this->commonArguments(), ["--configuration=$file"], $options);
     }
 
     /**
@@ -276,8 +266,12 @@ class TestCommand extends Command
                 && ! Str::startsWith($option, '--without-databases');
         }));
 
+        if (! file_exists($file = base_path('phpunit.xml'))) {
+            $file = base_path('phpunit.xml.dist');
+        }
+
         $options = array_merge($this->commonArguments(), [
-            '--configuration='.$this->getConfigurationFile(),
+            "--configuration=$file",
             "--runner=\Illuminate\Testing\ParallelRunner",
         ], $options);
 
