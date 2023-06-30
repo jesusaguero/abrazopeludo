@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\DonacionController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,3 +62,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/adopta', [App\Http\Controllers\HomeController::class, 'adopta'])->name('adopta');
 Route::get('/donacion', [App\Http\Controllers\HomeController::class, 'donacion'])->name('donacion');
 
+Route::resource('usuarios', UsuarioController::class);
+Route::resource('productos', ProductoController::class);
+Route::resource('donaciones', DonacionController::class);
