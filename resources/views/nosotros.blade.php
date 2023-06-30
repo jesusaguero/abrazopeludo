@@ -1,7 +1,6 @@
+@extends('layouts.cabezera')
 
-
-
-    <!-- Navbar Start -->
+    <!-- Sección Menu principal -->
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
             <a href="" class="navbar-brand d-block d-lg-none">
@@ -23,7 +22,7 @@
             </div>
         </nav>
     </div>
-    <!-- Navbar End -->
+    <!-- Sección Menu principal -->
 
 
     <!-- About Start -->
