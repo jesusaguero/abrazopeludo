@@ -153,4 +153,5 @@
 </div>
 
     <!-- Sección Equipo-->
+    
 @extends('layouts.barra')
