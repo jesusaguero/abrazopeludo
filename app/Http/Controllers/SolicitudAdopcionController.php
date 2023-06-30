@@ -65,9 +65,8 @@ class SolicitudAdopcionController extends Controller
     public function mostrarResumenSolicitud(Request $request)
     {
         $solicitud = $this->getSessionData($request);
-        $registros = SolicitudAdopcion::all();
 
-        return view('mascotas.resumen-solicitud', compact('solicitud', 'registros'));
+        return view('mascotas.resumen-solicitud', compact('solicitud'));
     }
 
     public function descargarResumen(Request $request)

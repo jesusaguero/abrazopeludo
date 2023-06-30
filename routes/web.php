@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/procesar_formulario', [SolicitudAdopcionController::class, 'store'])->name('procesar.formulario');
-Route::get('/resumen-solicitud', [SolicitudAdopcionController::class, 'mostrarResumenSolicitud'])->name('resumen-solicitud');
 Route::get('/descargar-resumen', [SolicitudAdopcionController::class, 'descargarResumen'])->name('descargar-resumen');
 Route::get('descargar/{id}', [SolicitudAdopcionController::class, 'descargarPDF'])->name('descargar-pdf');
 
@@ -42,15 +41,11 @@ Route::get('/consultas', function () {
     return view('consultas');
 });
 
-Route::prefix('mascotas')->group(function () {
-    Route::get('/solicitudadopcion', function () {
-        return view('mascotas.solicitudadopcion');
-    })->name('mascotas.solicitudadopcion');
+Route::get('/mascotas/resumen-solicitud', [SolicitudAdopcionController::class, 'mostrarResumenSolicitud'])->name('mascotas.resumen-solicitud');
 
-    Route::get('/resumen-solicitud', function () {
-        return view('mascotas.resumen-solicitud');
-    })->name('mascotas.resumen-solicitud');
-});
+Route::get('/solicitudadopcion', function () {
+    return view('mascotas.solicitudadopcion');
+})->name('mascotas.solicitudadopcion');
 
 Route::prefix('mascotas')->group(function () {
     for ($i = 1; $i <= 12; $i++) {

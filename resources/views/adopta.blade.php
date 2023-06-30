@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card text-ce    nter" style="width: 18rem;">
+                <div class="card text-center" style="width: 18rem;">
                     <img class="card-img-top img-fluid" src="import/img/mascotas/dog-2.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Luna</h5>
