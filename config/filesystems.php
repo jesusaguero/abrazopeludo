@@ -55,6 +55,14 @@ return [
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
         ],
+        
+        'resumen_solicitud' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/resumen_solicitud'),
+            'url' => env('APP_URL').'/storage/resumen_solicitud', // Cambio aquí
+            'visibility' => 'public',
+            'throw' => true,
+        ],
 
     ],
 

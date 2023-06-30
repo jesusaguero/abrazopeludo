@@ -1,28 +1,21 @@
 <?php
 
+use App\Http\Controllers\SolicitudAdopcionController;
+use App\Http\Controllers\MascotaController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CartController;
-use App\Http\Controllers\UsuarioController;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\ProductoController;
-use App\Http\Controllers\DonacionController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+Route::post('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/procesar_formulario', [SolicitudAdopcionController::class, 'store'])->name('procesar.formulario');
+Route::get('/resumen-solicitud', [SolicitudAdopcionController::class, 'mostrarResumenSolicitud'])->name('resumen-solicitud');
+Route::get('/descargar-resumen', [SolicitudAdopcionController::class, 'descargarResumen'])->name('descargar-resumen');
+Route::get('descargar/{id}', [SolicitudAdopcionController::class, 'descargarPDF'])->name('descargar-pdf');
+Route::get('/mascotas', [MascotaController::class, 'index'])->name('mascotas.index');
 
 Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/home', function () {
+    return view('inicio');
+})->name('inicio');
+    
+Route::get('/inicio', function () {
     return view('inicio');
 });
 
@@ -38,6 +31,9 @@ Route::get('/donacion', function () {
     return view('donacion');
 });
 
+Route::get('/compra', function () {
+    return view('compra');
+});
 
 Route::get('/foros', function () {
     return view('foros');
@@ -47,20 +43,12 @@ Route::get('/consultas', function () {
     return view('consultas');
 });
 
+Route::get('/solicitudadopcion', function () {
+    return view('solicitudadopcion');
+});
+
 Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/compra', function () {
-    return view('compra');
-});
-
 Auth::routes();
-
-Route::get('/compra', [App\Http\Controllers\HomeController::class, 'compra'])->name('compra');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/adopta', [App\Http\Controllers\HomeController::class, 'adopta'])->name('adopta');
-Route::get('/donacion', [App\Http\Controllers\HomeController::class, 'donacion'])->name('donacion');
-
-Route::resource('productos', ProductoController::class);
-Route::resource('donaciones', DonacionController::class);
