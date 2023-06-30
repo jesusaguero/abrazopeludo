@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>Solicitud Adopcion</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -31,7 +31,7 @@
 
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="import/css/style.css" rel="stylesheet">
+    <link href="{{ asset('import/css/style.css') }}" rel="stylesheet">
     <link href="import/css/stylemessage.css" rel="stylesheet">
 </head>
 <body>
@@ -78,7 +78,7 @@
         <div class="row">
             <div class="col-md-4">
                 <!-- Imagen a la izquierda -->
-                <img src="import/img/mascotas/perro1.jpg" class="img-fluid img-height" alt="Imagen 1" style="height: 100%;">
+                <img src="{{ asset('import/img/mascotas/perro1.jpg') }}" class="img-fluid img-height" alt="Imagen 1" style="height: 100%;">
             </div>
             <div class="col-md-4">
                 <!-- Formulario -->
@@ -128,7 +128,7 @@
             </div>
             <div class="col-md-4">
                 <!-- Imagen a la derecha -->
-                <img src="import/img/mascotas/perro2.jpg" class="img-fluid img-height" alt="Imagen 2" style="height: 100%;">
+                <img src="{{ asset('import/img/mascotas/perro2.jpg') }}" class="img-fluid img-height" alt="Imagen 2" style="height: 100%;">
             </div>
         </div>
     </div>

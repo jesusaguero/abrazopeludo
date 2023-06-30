@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>Abrazo Peludo</title>
+    <title>Descripcion mascotas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
 
     <!-- Favicon -->
     <link href="/favicon.ico" rel="icon">
@@ -26,7 +24,6 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('import/css/style.css') }}" rel="stylesheet">
 </head>
-
 <body>
     <!-- Topbar Start -->
     <div class="container-fluid">
@@ -44,7 +41,7 @@
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
             <a href="" class="navbar-brand d-block d-lg-none">
-                <h1 class="m-0 display-5 text-capitalize font-italic text-white"><span class="text-primary">Abrazo</span>Peludo</h1>
+                <h1 class="m-0 display-5 text-capitalize font-italic text-white"><span class="text-primary">Abrazo</span>Peludo</h1>            
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -59,42 +56,29 @@
                     <a href="foros" class="nav-item nav-link">Foros</a>
                     <a href="consultas" class="nav-item nav-link">Consultas</a>
                 </div>
-                <a href="" class="btn btn-lg btn-primary px-3 d-none d-lg-block">Ingresa</a>
+                <a href="welcome" class="btn btn-lg btn-primary px-3 d-none d-lg-block">Ingresa</a>
             </div>
         </nav>
     </div>
-    <!-- Navbar End -->
-<body>
-    <div class="container">
-        <div class="row mt-5">
-            <div class="col-3">
-                <a href="adopta" class="btn btn-lg btn-primary px-3 d-none d-lg-block">Volver a Adopta</a>
+
+    <!-- Contenido principal -->
+    <div id="descripcion-duque" class="container my-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="{{ asset('import/img/mascotas/dog-5.jpg') }}" alt="Imagen de la mascota" class="img-fluid">
             </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="card-title">Resumen de la Solicitud de Adopción</h2>
-
-                        @if($solicitud)
-                            <p class="card-text">Nombres: {{ $solicitud['nombres'] }}</p>
-                            <p class="card-text">Apellidos: {{ $solicitud['apellidos'] }}</p>
-                            <p class="card-text">Teléfono: {{ $solicitud['telefono'] }}</p>
-                            <p class="card-text">DNI: {{ $solicitud['dni'] }}</p>
-                            <p class="card-text">Correo electrónico: {{ $solicitud['correo'] }}</p>
-                            <p class="card-text">Experiencia con mascotas: {{ $solicitud['experiencia'] }}</p>
-
-                            <a href="{{ route('descargar-resumen') }}" class="btn btn-primary float-end">Descargar Resumen</a>
-                        @else
-                            <p class="card-text">No hay datos de solicitud disponibles.</p>
-                        @endif
-                    </div>
-                </div>
+            <div class="col-lg-6">
+                <h2>Descripción de la mascota</h2>
+                <p>¡Hola, mi nombre es Duke!</p>
+                <p>Soy un perro valiente y juguetón en busca de una familia activa. Me encanta correr, jugar a la pelota y aprender nuevos trucos. Si me adoptas, seré tu compañero perfecto para las aventuras al aire libre. ¿Estás listo para vivir emocionantes momentos juntos?</p>
+                <p>Sexo: Macho</p>
+                <p>Tamaño: Mediano</p>
+                <p>Nivel de Actividad: Alto</p>
+                <p>Fecha aproximada de nacimiento: Julio 2015</p>
+                <a href="{{ route('mascotas.solicitudadopcion') }}" class="btn btn-primary">Solicitar Adopción</a>
             </div>
         </div>
     </div>
-
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
@@ -176,9 +160,5 @@
 
     <!-- Template Javascript -->
     <script src="import/js/main.js"></script>
-    <!-- Scripts de Bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
-</html>
+</html> 

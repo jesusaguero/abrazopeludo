@@ -81,7 +81,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Rocky</h5>
                         <p class="card-text"> Rocky es un perro valiente y enérgico. Le encanta correr y jugar en el parque. Es muy leal y siempre está dispuesto a proteger a su familia.</p>
-                        <a href="{{ route('mascotas.index') }}#descripcion-rocky" class="btn btn-primary">ADOPTAR</a>
+                        <a href="{{ route('mascotas.mascota1') }}#descripcion-rocky" class="btn btn-primary">ADOPTAR</a>
                     </div>
                 </div>
             </div>
@@ -91,7 +91,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Luna</h5>
                         <p class="card-text">Luna es una perrita cariñosa y juguetona. Le encanta recibir mimos y jugar con su pelota favorita. Es muy sociable y se lleva bien con otros perros.</p>
-                        <a href="{{ route('mascotas.index') }}#descripcion-luna" class="btn btn-primary">ADOPTAR</a>
+                        <a href="{{ route('mascotas.mascota2') }}#descripcion-luna" class="btn btn-primary">ADOPTAR</a>
                     </div>
                 </div>
             </div>
@@ -101,7 +101,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Max</h5>
                         <p class="card-text">Max es un perro muy inteligente y obediente. Le encanta aprender nuevos trucos y realizar actividades al aire libre. Es un compañero leal y protector.</p>
-                        <a href="{{ route('mascotas.index') }}#descripcion-max" class="btn btn-primary">ADOPTAR</a>
+                        <a href="{{ route('mascotas.mascota3') }}#descripcion-max" class="btn btn-primary">ADOPTAR</a>
                     </div>
                 </div>
             </div>
@@ -111,7 +111,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Bella</h5>
                         <p class="card-text">Bella es una perrita tierna y juguetona. Siempre está lista para recibir caricias y dar lamidas de amor. Le gusta pasear y explorar nuevos lugares.</p>
-                        <a href="{{ route('mascotas.index') }}#descripcion-bella" class="btn btn-primary">ADOPTAR</a>
+                        <a href="{{ route('mascotas.mascota4') }}#descripcion-bella" class="btn btn-primary">ADOPTAR</a>
                     </div>
                 </div>
             </div>
@@ -121,7 +121,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Duke</h5>
                         <p class="card-text">Duke es un perro atlético y enérgico. Le encanta correr largas distancias y jugar al aire libre. Es muy amigable con las personas y disfruta de la compañía.</p>
-                        <a href="{{ route('mascotas.index') }}#descripcion-duque" class="btn btn-primary">ADOPTAR</a>
+                        <a href="{{ route('mascotas.mascota5') }}#descripcion-duque" class="btn btn-primary">ADOPTAR</a>
                     </div>
                 </div>
             </div>
@@ -131,7 +131,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Coco</h5>
                         <p class="card-text"> Coco es una perrita pequeña y adorable. Aunque es tímida al principio, se vuelve cariñosa una vez que se siente segura. Le gusta descansar en el regazo de sus dueños.</p>
-                        <a href="{{ route('mascotas.index') }}#descripcion-coco" class="btn btn-primary">ADOPTAR</a>
+                        <a href="{{ route('mascotas.mascota6') }}#descripcion-coco" class="btn btn-primary">ADOPTAR</a>
                     </div>
                 </div>
             </div>
@@ -141,7 +141,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Simba</h5>
                         <p class="card-text">Simba es un gato aventurero y curioso. Siempre está explorando nuevos rincones y persiguiendo juguetes por toda la casa. Es cariñoso y le encanta que le acaricien.</p>
-                        <a href="{{ route('mascotas.index') }}#descripcion-simba" class="btn btn-primary">ADOPTAR</a>
+                        <a href="{{ route('mascotas.mascota7') }}#descripcion-simba" class="btn btn-primary">ADOPTAR</a>
                     </div>
                 </div>
             </div>
@@ -151,7 +151,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Vene</h5>
                         <p class="card-text">Vene es una gatita elegante y tranquila. Disfruta de largas siestas al sol y de jugar con pelotas de estambre. Es muy independiente, pero también le gusta recibir mimos.</p>
-                        <a href="{{ route('mascotas.index') }}#descripcion-vene" class="btn btn-primary">ADOPTAR</a>
+                        <a href="{{ route('mascotas.mascota8') }}#descripcion-vene" class="btn btn-primary">ADOPTAR</a>
                     </div>
                 </div>
             </div>
@@ -161,7 +161,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Oliver</h5>
                         <p class="card-text">Oliver es un gato inteligente y juguetón. Le gusta resolver acertijos y cazar juguetes interactivos. Es cariñoso y siempre está buscando atención y caricias.</p>
-                        <a href="{{ route('mascotas.index') }}#descripcion-oliver" class="btn btn-primary">ADOPTAR</a>
+                        <a href="{{ route('mascotas.mascota9') }}#descripcion-oliver" class="btn btn-primary">ADOPTAR</a>
                     </div>
                 </div>
             </div>
@@ -171,7 +171,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Pichu</h5>
                         <p class="card-text">Pichu es una gatita tímida y dulce. Le gusta pasar tiempo en lugares tranquilos y acogedores. Una vez que toma confianza, se convierte en una compañera leal.</p>
-                        <a href="{{ route('mascotas.index') }}#descripcion-pichu" class="btn btn-primary">ADOPTAR</a>
+                        <a href="{{ route('mascotas.mascota10') }}#descripcion-pichu" class="btn btn-primary">ADOPTAR</a>
                     </div>
                 </div>
             </div>
@@ -181,7 +181,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Filomena</h5>
                         <p class="card-text">Filomena es un gato atlético y aventurero. Le encanta trepar a los árboles y explorar su entorno. Es muy curioso y siempre está en busca de nuevas experiencias.</p>
-                        <a href="{{ route('mascotas.index') }}#descripcion-filomena" class="btn btn-primary">ADOPTAR</a>
+                        <a href="{{ route('mascotas.mascota11') }}#descripcion-filomena" class="btn btn-primary">ADOPTAR</a>
                     </div>
                 </div>
             </div>
@@ -191,7 +191,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Chloe</h5>
                         <p class="card-text">Chloe es una gata cariñosa y juguetona. Le gusta jugar con pelotas y perseguir plumas. Es sociable y se lleva bien con otros animales de compañía.</p>
-                        <a href="{{ route('mascotas.index') }}#descripcion-chloe" class="btn btn-primary">ADOPTAR</a>
+                        <a href="{{ route('mascotas.mascota12') }}#descripcion-chloe" class="btn btn-primary">ADOPTAR</a>
                     </div>
                 </div>
             </div>

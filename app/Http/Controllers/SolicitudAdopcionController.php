@@ -59,7 +59,7 @@ class SolicitudAdopcionController extends Controller
 
         $request->session()->put('solicitud', $solicitud);
 
-        return redirect()->route('resumen-solicitud');
+        return redirect()->route('mascotas.resumen-solicitud');
     }
 
     public function mostrarResumenSolicitud(Request $request)
@@ -67,7 +67,7 @@ class SolicitudAdopcionController extends Controller
         $solicitud = $this->getSessionData($request);
         $registros = SolicitudAdopcion::all();
 
-        return view('resumen-solicitud', compact('solicitud', 'registros'));
+        return view('mascotas.resumen-solicitud', compact('solicitud', 'registros'));
     }
 
     public function descargarResumen(Request $request)
@@ -75,7 +75,7 @@ class SolicitudAdopcionController extends Controller
         $solicitud = $this->getSessionData($request);
 
         if (!$solicitud) {
-            return redirect()->route('resumen-solicitud');
+            return redirect()->route('mascotas.resumen-solicitud');
         }
 
         $resumen = "<h1>Resumen de la solicitud:</h1>";
