@@ -10,10 +10,10 @@ Route::get('/descargar-resumen', [SolicitudAdopcionController::class, 'descargar
 Route::get('descargar/{id}', [SolicitudAdopcionController::class, 'descargarPDF'])->name('descargar-pdf');
 
 Route::get('/', function () {
-    return view('inicio');
-})->name('inicio');
+    return view('home');
+});
 
-Route::get('/inicio', function () {
+Route::get('/home', function () {
     return view('inicio');
 });
 
@@ -29,9 +29,6 @@ Route::get('/donacion', function () {
     return view('donacion');
 });
 
-Route::get('/compra', function () {
-    return view('compra');
-});
 
 Route::get('/foros', function () {
     return view('foros');
@@ -39,6 +36,14 @@ Route::get('/foros', function () {
 
 Route::get('/consultas', function () {
     return view('consultas');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/compra', function () {
+    return view('compra');
 });
 
 Route::get('/mascotas/resumen-solicitud', [SolicitudAdopcionController::class, 'mostrarResumenSolicitud'])->name('mascotas.resumen-solicitud');
@@ -56,8 +61,12 @@ Route::prefix('mascotas')->group(function () {
 });
 
 
-Route::get('/login', function () {
-    return view('login');
-});
+
 
 Auth::routes();
+
+
+Route::get('/compra', [App\Http\Controllers\HomeController::class, 'compra'])->name('compra');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/adopta', [App\Http\Controllers\HomeController::class, 'adopta'])->name('adopta');
+Route::get('/donacion', [App\Http\Controllers\HomeController::class, 'donacion'])->name('donacion');

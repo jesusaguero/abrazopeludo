@@ -1,43 +1,7 @@
-@extends('layouts.header')
-
-    <!-- Nombre Web -->
-    <div class="container-fluid">
-        <div class="row py-3 px-lg-5">
-            <div class="col-lg-4">
-                <a href="" class="navbar-brand d-none d-lg-block">
-                    <h1 class="m-0 display-5 text-capitalize"><span class="text-primary">Abrazo</span>Peludo</h1>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- Nombre Web -->
-    <!-- Sección Menu principal -->
-    <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
-            <a href="" class="navbar-brand d-block d-lg-none">
-                <h1 class="m-0 display-5 text-capitalize font-italic text-white"><span class="text-primary">Abrazo</span>Peludo</h1>            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-                <div class="navbar-nav mr-auto py-0">
-                    <a href="inicio" class="nav-item nav-link active">Inicio</a>
-                    <a href="nosotros" class="nav-item nav-link">Nosotros</a>
-                    <a href="adopta" class="nav-item nav-link">Adopta</a>
-                    <a href="donacion" class="nav-item nav-link">Donación</a>
-                    <a href="compra" class="nav-item nav-link">Compra</a>
-                    <a href="foros" class="nav-item nav-link">Foros</a>
-                    <a href="consultas" class="nav-item nav-link">Consultas</a>
-                </div>
-                <a href="login" class="btn btn-lg btn-primary px-3 d-none d-lg-block">Ingresa</a>
-            </div>
-        </nav>
-    </div>
-    <!-- Sección Menu principal -->
-
-
-    <!-- Sección Carrusel -->
-    <div class="container-fluid p-0">
+@extends('layouts.app')
+@section('content')
+<!-- SECCIÓN DE CARRUSEL -->
+<div class="container-fluid p-0">
         <div id="header-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -69,9 +33,10 @@
             </a>
         </div>
     </div>
-    <!-- Sección Carrusel -->
+<!-- SECCIÓN DE CARRUSEL -->
 
-    <!-- Sección Servicios -->
+<!-- SECCIÓN DE OBJETIVOS -->
+
     <div class="container-fluid bg-light pt-5">
         <div class="container py-5">
             <div class="d-flex flex-column text-center mb-5">
@@ -123,9 +88,9 @@
             </div>
         </div>
     </div>
-    <!-- Sección Servicios -->
+<!-- SECCIÓN DE OBJETIVOS -->
 
-    <!-- Sección Testimonios -->
+<!-- SECCIÓN DE TESTIMONIOS -->
     <div class="container-fluid bg-light my-5 p-0 py-5">
     <div class="container p-0 py-5">
         <div class="d-flex flex-column text-center mb-5">
@@ -159,7 +124,5 @@
         </div>
     </div>
 </div>
-
-    <!-- Sección Testimonios -->
-
-@extends('layouts.footer')
+<!-- SECCIÓN DE TESTIMONIOS -->
+@endsection
