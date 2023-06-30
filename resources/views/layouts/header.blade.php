@@ -28,14 +28,3 @@
 </head>
 
 <body>
-    <!-- Nombre Web -->
-    <div class="container-fluid">
-        <div class="row py-3 px-lg-5">
-            <div class="col-lg-4">
-                <a href="" class="navbar-brand d-none d-lg-block">
-                    <h1 class="m-0 display-5 text-capitalize"><span class="text-primary">Abrazo</span>Peludo</h1>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- Nombre Web -->
