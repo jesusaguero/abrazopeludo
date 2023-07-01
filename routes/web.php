@@ -3,6 +3,7 @@
 use App\Http\Controllers\SolicitudAdopcionController;
 use App\Http\Controllers\MascotaController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DonacionController;
 
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/procesar_formulario', [SolicitudAdopcionController::class, 'store'])->name('procesar.formulario');
@@ -70,3 +71,4 @@ Route::get('/compra', [App\Http\Controllers\HomeController::class, 'compra'])->n
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/adopta', [App\Http\Controllers\HomeController::class, 'adopta'])->name('adopta');
 Route::get('/donacion', [App\Http\Controllers\HomeController::class, 'donacion'])->name('donacion');
+Route::resource('donaciones', DonacionController::class);

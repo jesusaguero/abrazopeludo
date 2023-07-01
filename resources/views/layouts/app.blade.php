@@ -126,7 +126,7 @@
                     <div class="col-md-4 mb-5">
                         <h5 class="text-primary mb-4">Conoce más</h5>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white mb-2" href="inicio"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
+                            <a class="text-white mb-2" href="home"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
                             <a class="text-white mb-2" href="nosotros"><i class="fa fa-angle-right mr-2"></i>Nosotros</a>
                             <a class="text-white mb-2" href="adopta"><i class="fa fa-angle-right mr-2"></i>Adopta</a>
                             <a class="text-white mb-2" href="compra"><i class="fa fa-angle-right mr-2"></i>Compra</a>

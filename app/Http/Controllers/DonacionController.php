@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Donacion;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class DonacionController extends Controller
 {
@@ -17,7 +18,7 @@ class DonacionController extends Controller
     public function store(Request $request)
     {
         $donacion = new Donacion();
-        $donacion->id_usuario = 1;
+        $donacion->id_usuario = Auth::id();
         $medio = ($request->input('medio') === 'Yape') ? 1 : 2;
         $donacion->id_medio_de_pago = $medio;
         $donacion->monto = $request->input('monto');
