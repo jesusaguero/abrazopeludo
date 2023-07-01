@@ -18,7 +18,7 @@ class DonacionController extends Controller
     public function store(Request $request)
     {
         $donacion = new Donacion();
-        $donacion->id_usuario = Auth::id();
+        $donacion->id_users = Auth::id();
         $medio = ($request->input('medio') === 'Yape') ? 1 : 2;
         $donacion->id_medio_de_pago = $medio;
         $donacion->monto = $request->input('monto');

@@ -16,7 +16,7 @@ class Donacion extends Model
     protected $primaryKey = 'id_donacion'; // Columna de la clave primaria
 
     protected $fillable = [
-        'id_usuario',
+        'id_users',
         'id_medio_de_pago',
         'monto',
         'fecha',
