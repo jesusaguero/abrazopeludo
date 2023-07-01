@@ -100,7 +100,7 @@
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="import/img/pet3.jpg" alt="Card image cap">
                 <div class="card-body">
-                    <p class="card-text">En Royal Canin, llevamos desde 1968 trabajando para que la nutrición sea la principal medicina de gatos y perros. Esta es nuestra forma de hacer "a better world for pets" (un mundo mejor para las mascotas).</p>
+                    <p class="card-text">En Royal Canin, llevamos desde 1968 trabajando para que la nutrición sea la principal medicina de gatos y perros. Esta es nuestra forma de hacer "a better world for pets".</p>
                 </div>
             </div>
             <div class="card" style="width: 18rem;">

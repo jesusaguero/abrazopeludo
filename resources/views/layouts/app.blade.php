@@ -107,7 +107,7 @@
         <div class="row pt-5">
             <div class="col-lg-4 col-md-12 mb-5">
                 <h1 class="mb-3 display-5 text-capitalize text-white"><span class="text-primary">Abrazo</span>Peludo</h1>
-                <p class="m-0">Más que un albergue somos un hogar | Nuestro objetivo como albergue es el poder encontrar un hogar responsable a las mascotas/p>
+                <p class="m-0">Más que un albergue somos un hogar | Nuestro objetivo como albergue es el poder encontrar un hogar responsable a las mascotas</p>
             </div>
             <div class="col-lg-8 col-md-12">
                 <div class="row">
