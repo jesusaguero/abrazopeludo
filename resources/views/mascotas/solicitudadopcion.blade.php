@@ -83,7 +83,7 @@
             <div class="col-md-4">
                 <!-- Formulario -->
                 <div class="text-center">
-                    <form action="{{ route('procesar.formulario') }}" method="POST">
+                    <form id="solicitudForm" action="{{ route('procesar.formulario') }}" method="POST">
                         @csrf
                         <h2>FORMULARIO DE ADOPCIÓN DE MASCOTAS</h2>
                         <div class="form-group">
@@ -139,6 +139,7 @@
             <a href="#" class="btn btn-primary" id="resumenBtn">Ver Resumen</a>
         </div>
     </div>
+    
 
 
    
@@ -201,8 +202,32 @@
         </div>
     </div>
     <!-- Footer End -->
+    <!--
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var solicitudForm = document.getElementById('solicitudForm');
+            var messageBox = document.getElementById('messageBox');
+            var resumenButton = document.getElementById('resumenBtn');
 
+            solicitudForm.addEventListener('submit', function(e) {
+                e.preventDefault();
 
+                // Mostrar el mensaje de agradecimiento
+                messageBox.style.display = 'flex';
+
+                // Redireccionar a la vista "adopta"
+                resumenButton.href = "adopta";
+
+                // Redireccionar después de 5 segundos
+                setTimeout(function() {
+                    window.location.href = resumenButton.href;
+                }, 5000);
+
+                // Enviar el formulario de forma normal
+                donacionForm.submit();
+            });
+        });
+    </script>  -->
 
 
     <!-- Back to Top -->
