@@ -23,7 +23,7 @@
                     <img class="card-img-top img-fluid" src="import/img/mascotas/dog-2.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Luna</h5>
-                        <p class="card-text">Luna es una perrita cariñosa y juguetona. Le encanta recibir mimos y jugar con su pelota favorita. Es muy sociable y se lleva bien con otros perros.</p>
+                         <p class="card-text">Luna es una perrita cariñosa y juguetona. Le encanta recibir mimos y jugar con su pelota favorita. Es muy sociable y se lleva bien con otros perros.</p>
                         <a href="{{ route('mascotas.mascota2') }}#descripcion-luna" class="btn btn-primary">ADOPTAR</a>
                     </div>
                 </div>
