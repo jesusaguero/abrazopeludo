@@ -69,32 +69,37 @@ class SolicitudAdopcionController extends Controller
         return view('mascotas.resumen-solicitud', compact('solicitud'));
     }
 
-public function descargarResumen(Request $request)
-{
-    $solicitud = $this->getSessionData($request);
+    public function descargarResumen(Request $request)
+    {
+        $solicitud = $this->getSessionData($request);
 
-    if (!$solicitud) {
-        return redirect()->route('mascotas.resumen-solicitud');
+        if (!$solicitud) {
+            return redirect()->route('mascotas.resumen-solicitud');
+        }
+
+        $resumen = "<h1 style='color: red;'>Resumen de la solicitud:</h1>";
+        $resumen .= "<p style='font-size: 16px;'>Nombres: {$solicitud['nombres']}</p>";
+        $resumen .= "<p style='font-size: 16px;'>Apellidos: {$solicitud['apellidos']}</p>";
+        $resumen .= "<p style='font-size: 16px;'>Teléfono: {$solicitud['telefono']}</p>";
+        $resumen .= "<p style='font-size: 16px;'>DNI: {$solicitud['dni']}</p>";
+        $resumen .= "<p style='font-size: 16px;'>Correo electrónico: {$solicitud['correo']}</p>";
+        $resumen .= "<p style='font-size: 16px;'>Experiencia con mascotas: {$solicitud['experiencia']}</p>";
+
+        $options = new Options();
+        $options->set('isRemoteEnabled', true);
+
+        $dompdf = new Dompdf($options);
+        $dompdf->loadHtml($resumen);
+        $dompdf->render();
+        $pdfContent = $dompdf->output();
+
+        $response = response($pdfContent, 200, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'attachment; filename=resumen_solicitud.pdf',
+        ]);
+
+        return $response;
     }
-
-    $htmlFile = public_path('resumen.html');
-
-    $options = new Options();
-    $options->set('isRemoteEnabled', true);
-
-    $dompdf = new Dompdf($options);
-    $dompdf->loadHtmlFile($htmlFile);
-    $dompdf->render();
-    $pdfContent = $dompdf->output();
-
-    $response = response($pdfContent, 200, [
-        'Content-Type' => 'application/pdf',
-        'Content-Disposition' => 'attachment; filename=resumen_solicitud.pdf',
-    ]);
-
-    return $response;
-}
-
 
     private function validateFormData(Request $request)
     {
@@ -111,7 +116,7 @@ public function descargarResumen(Request $request)
     private function getSessionData(Request $request)
     {
         return $request->session()->get('solicitud');
-    }
+    }  
     public function descargarPDF($id)
     {
         $solicitud = SolicitudAdopcion::findOrFail($id);
