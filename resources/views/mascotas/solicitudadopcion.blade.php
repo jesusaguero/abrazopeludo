@@ -202,34 +202,6 @@
         </div>
     </div>
     <!-- Footer End -->
-    <!--
-    <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            var solicitudForm = document.getElementById('solicitudForm');
-            var messageBox = document.getElementById('messageBox');
-            var resumenButton = document.getElementById('resumenBtn');
-
-            solicitudForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-
-                // Mostrar el mensaje de agradecimiento
-                messageBox.style.display = 'flex';
-
-                // Redireccionar a la vista "adopta"
-                resumenButton.href = "adopta";
-
-                // Redireccionar después de 5 segundos
-                setTimeout(function() {
-                    window.location.href = resumenButton.href;
-                }, 5000);
-
-                // Enviar el formulario de forma normal
-                donacionForm.submit();
-            });
-        });
-    </script>  -->
-
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
