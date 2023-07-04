@@ -69,37 +69,32 @@ class SolicitudAdopcionController extends Controller
         return view('mascotas.resumen-solicitud', compact('solicitud'));
     }
 
-    public function descargarResumen(Request $request)
-    {
-        $solicitud = $this->getSessionData($request);
+public function descargarResumen(Request $request)
+{
+    $solicitud = $this->getSessionData($request);
 
-        if (!$solicitud) {
-            return redirect()->route('mascotas.resumen-solicitud');
-        }
-
-        $resumen = "<h1>Resumen de la solicitud:</h1>";
-        $resumen .= "<p><strong>Nombres:</strong> {$solicitud['nombres']}</p>";
-        $resumen .= "<p><strong>Apellidos:</strong> {$solicitud['apellidos']}</p>";
-        $resumen .= "<p><strong>Teléfono:</strong> {$solicitud['telefono']}</p>";
-        $resumen .= "<p><strong>DNI:</strong> {$solicitud['dni']}</p>";
-        $resumen .= "<p><strong>Correo electrónico:</strong> {$solicitud['correo']}</p>";
-        $resumen .= "<p><strong>Experiencia con mascotas:</strong> {$solicitud['experiencia']}</p>";
-
-        $options = new Options();
-        $options->set('isRemoteEnabled', true);
-
-        $dompdf = new Dompdf($options);
-        $dompdf->loadHtml($resumen);
-        $dompdf->render();
-        $pdfContent = $dompdf->output();
-
-        $response = response($pdfContent, 200, [
-            'Content-Type' => 'application/pdf',
-            'Content-Disposition' => 'attachment; filename=resumen_solicitud.pdf',
-        ]);
-
-        return $response;
+    if (!$solicitud) {
+        return redirect()->route('mascotas.resumen-solicitud');
     }
+
+    $htmlFile = public_path('resumen.html');
+
+    $options = new Options();
+    $options->set('isRemoteEnabled', true);
+
+    $dompdf = new Dompdf($options);
+    $dompdf->loadHtmlFile($htmlFile);
+    $dompdf->render();
+    $pdfContent = $dompdf->output();
+
+    $response = response($pdfContent, 200, [
+        'Content-Type' => 'application/pdf',
+        'Content-Disposition' => 'attachment; filename=resumen_solicitud.pdf',
+    ]);
+
+    return $response;
+}
+
 
     private function validateFormData(Request $request)
     {
