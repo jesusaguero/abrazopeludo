@@ -62,10 +62,10 @@
                 // Redireccionar al resumen de solicitud
                 resumenButton.href = window.location.href;
 
-                // Redireccionar después de 3 segundos 
+                // Redireccionar después de 10 segundos
                 setTimeout(function() {
                     window.location.href = resumenButton.href;
-                }, 5000);
+                }, 20000);
 
                 // Enviar el formulario de forma normal
                 donacionForm.submit();
