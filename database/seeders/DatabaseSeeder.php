@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->createAdmin();
+        $this->call(ProductsTableSeeder::class);
     }
 
     public function createAdmin(){

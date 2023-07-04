@@ -4,6 +4,7 @@ use App\Http\Controllers\SolicitudAdopcionController;
 use App\Http\Controllers\MascotaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DonacionController;
+use App\Http\Controllers\CartController;
 
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/procesar_formulario', [SolicitudAdopcionController::class, 'store'])->name('procesar.formulario');
@@ -67,8 +68,15 @@ Route::prefix('mascotas')->group(function () {
 Auth::routes();
 
 
-Route::get('/compra', [App\Http\Controllers\HomeController::class, 'compra'])->name('compra');
+Route::get('/shop', [App\Http\Controllers\CartController::class, 'shop'])->name('shop');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/adopta', [App\Http\Controllers\HomeController::class, 'adopta'])->name('adopta');
 Route::get('/donacion', [App\Http\Controllers\HomeController::class, 'donacion'])->name('donacion');
 Route::resource('donaciones', DonacionController::class);
+
+
+Route::get('/cart', [CartController::class, 'cart'])->name('cart.index');
+Route::post('/add', [CartController::class, 'add'])->name('cart.store');
+Route::post('/update', [CartController::class, 'update'])->name('cart.update');
+Route::post('/remove', [CartController::class, 'remove'])->name('cart.remove');
+Route::post('/clear', [CartController::class, 'clear'])->name('cart.clear');

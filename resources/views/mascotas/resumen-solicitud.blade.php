@@ -55,7 +55,7 @@
                     <a href="../nosotros" class="nav-item nav-link">Nosotros</a>
                     <a href="../adopta" class="nav-item nav-link active">Adopta</a>
                     <a href="../donacion" class="nav-item nav-link">Donación</a>
-                    <a href="../compra" class="nav-item nav-link">Compra</a>
+                    <a href="../shop" class="nav-item nav-link">Compra</a>
                     <a href="../foros" class="nav-item nav-link">Foros</a>
                     <a href="../consultas" class="nav-item nav-link">Consultas</a>
                 </div>

@@ -1,23 +1,26 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Models\Product;
 
 class CartController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function shop()
     {
         $products = Product::all();
-        //dd($products);
-        return view('shop')->with(['products' => $products]);
+        return view('shop')->withTitle('E-COMMERCE STORE | SHOP')->with(['products' => $products]);
     }
 
     public function cart()  {
         $cartCollection = \Cart::getContent();
         //dd($cartCollection);
-        return view('cart')->with(['cartCollection' => $cartCollection]);;
+        return view('cart')->withTitle('E-COMMERCE STORE | CART')->with(['cartCollection' => $cartCollection]);;
     }
     public function remove(Request $request){
         \Cart::remove($request->id);
@@ -54,7 +57,6 @@ class CartController extends Controller
         return redirect()->route('cart.index')->with('success_msg', 'Car is cleared!');
     }
 
-
+ 
 
 }
-

@@ -26,9 +26,9 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function compra()
+    public function shop()
     {
-        return view('compra');
+        return view('shop');
     }
 
     public function adopta()
