@@ -116,7 +116,7 @@ class SolicitudAdopcionController extends Controller
     private function getSessionData(Request $request)
     {
         return $request->session()->get('solicitud');
-    }  
+    }
     public function descargarPDF($id)
     {
         $solicitud = SolicitudAdopcion::findOrFail($id);
