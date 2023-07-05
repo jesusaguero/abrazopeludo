@@ -9,28 +9,6 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\AdminController;
 //RUTAS DE LOS CONTROLADORES
 
-//LOGIN CONTROLLER
-Route::post('/login', [LoginController::class, 'login'])->name('login');
-//LOGIN CONTROLLER
-
-//SOLICITUD DE ADOPCIÓN CONTROLLER
-Route::post('/procesar_formulario', [SolicitudAdopcionController::class, 'store'])->name('procesar.formulario');
-Route::get('/descargar-resumen', [SolicitudAdopcionController::class, 'descargarResumen'])->name('descargar-resumen');
-Route::get('descargar/{id}', [SolicitudAdopcionController::class, 'descargarPDF'])->name('descargar-pdf');
-Route::get('/mascotas/resumen-solicitud', [SolicitudAdopcionController::class, 'mostrarResumenSolicitud'])->name('mascotas.resumen-solicitud');
-
-Route::get('/solicitudadopcion', function () {
-    return view('mascotas.solicitudadopcion');
-})->name('mascotas.solicitudadopcion');
-
-Route::prefix('mascotas')->group(function () {
-    for ($i = 1; $i <= 12; $i++) {
-        Route::get('/mascota'.$i, function () use ($i) {
-            return view('mascotas.mascota'.$i);
-        })->name('mascotas.mascota'.$i);
-    }
-});
-//SOLICITUD DE ADOPCIÓN CONTROLLER
 
 //RUTAS DE LAS VISTAS DE LAS MASCOTAS
 Route::get('/', function () {
@@ -71,6 +49,29 @@ Route::get('/compra', function () {
 });
 //RUTAS DE LAS VISTAS DE LAS MASCOTAS
 
+
+//LOGIN CONTROLLER
+Route::post('/login', [LoginController::class, 'login'])->name('login');
+//LOGIN CONTROLLER
+
+//SOLICITUD DE ADOPCIÓN CONTROLLER
+Route::post('/procesar_formulario', [SolicitudAdopcionController::class, 'store'])->name('procesar.formulario');
+Route::get('/descargar-resumen', [SolicitudAdopcionController::class, 'descargarResumen'])->name('descargar-resumen');
+Route::get('descargar/{id}', [SolicitudAdopcionController::class, 'descargarPDF'])->name('descargar-pdf');
+Route::get('/mascotas/resumen-solicitud', [SolicitudAdopcionController::class, 'mostrarResumenSolicitud'])->name('mascotas.resumen-solicitud');
+
+Route::get('/solicitudadopcion', function () {
+    return view('mascotas.solicitudadopcion');
+})->name('mascotas.solicitudadopcion');
+
+Route::prefix('mascotas')->group(function () {
+    for ($i = 1; $i <= 12; $i++) {
+        Route::get('/mascota'.$i, function () use ($i) {
+            return view('mascotas.mascota'.$i);
+        })->name('mascotas.mascota'.$i);
+    }
+});
+//SOLICITUD DE ADOPCIÓN CONTROLLER
 
 //RUTA DE LA VISTA DEL ADMINISTRADOR
 Route::get('/admin',[AdminController::class, 'index'])
