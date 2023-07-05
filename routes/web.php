@@ -17,8 +17,15 @@ Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/procesar_formulario', [SolicitudAdopcionController::class, 'store'])->name('procesar.formulario');
 Route::get('/descargar-resumen', [SolicitudAdopcionController::class, 'descargarResumen'])->name('descargar-resumen');
 Route::get('descargar/{id}', [SolicitudAdopcionController::class, 'descargarPDF'])->name('descargar-pdf');
+Route::get('/mascotas/resumen-solicitud', [SolicitudAdopcionController::class, 'mostrarResumenSolicitud'])->name('mascotas.resumen-solicitud');
+
+Route::get('/solicitudadopcion', function () {
+    return view('mascotas.solicitudadopcion');
+})->name('mascotas.solicitudadopcion');
+
 //SOLICITUD DE ADOPCIÓN CONTROLLER
 
+//RUTAS DE LAS VISTAS DE LAS MASCOTAS
 Route::get('/', function () {
     return view('home');
 });
@@ -55,16 +62,14 @@ Route::get('/login', function () {
 Route::get('/compra', function () {
     return view('compra');
 });
+//RUTAS DE LAS VISTAS DE LAS MASCOTAS
 
+
+//RUTA DE LA VISTA DEL ADMINISTRADOR
 Route::get('/admin',[AdminController::class, 'index'])
     ->middleware('auth.admin')
     ->name('admin.index');
-
-Route::get('/mascotas/resumen-solicitud', [SolicitudAdopcionController::class, 'mostrarResumenSolicitud'])->name('mascotas.resumen-solicitud');
-
-Route::get('/solicitudadopcion', function () {
-    return view('mascotas.solicitudadopcion');
-})->name('mascotas.solicitudadopcion');
+//RUTA DE LA VISTA DEL ADMINISTRADOR
 
 Route::prefix('mascotas')->group(function () {
     for ($i = 1; $i <= 12; $i++) {
