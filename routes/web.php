@@ -23,6 +23,13 @@ Route::get('/solicitudadopcion', function () {
     return view('mascotas.solicitudadopcion');
 })->name('mascotas.solicitudadopcion');
 
+Route::prefix('mascotas')->group(function () {
+    for ($i = 1; $i <= 12; $i++) {
+        Route::get('/mascota'.$i, function () use ($i) {
+            return view('mascotas.mascota'.$i);
+        })->name('mascotas.mascota'.$i);
+    }
+});
 //SOLICITUD DE ADOPCIÓN CONTROLLER
 
 //RUTAS DE LAS VISTAS DE LAS MASCOTAS
@@ -71,26 +78,14 @@ Route::get('/admin',[AdminController::class, 'index'])
     ->name('admin.index');
 //RUTA DE LA VISTA DEL ADMINISTRADOR
 
-Route::prefix('mascotas')->group(function () {
-    for ($i = 1; $i <= 12; $i++) {
-        Route::get('/mascota'.$i, function () use ($i) {
-            return view('mascotas.mascota'.$i);
-        })->name('mascotas.mascota'.$i);
-    }
-});
-
-
-
-
+//MIDDLEWARE SECCIONES
 Auth::routes();
-
-
 Route::get('/shop', [App\Http\Controllers\CartController::class, 'shop'])->name('shop');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/adopta', [App\Http\Controllers\HomeController::class, 'adopta'])->name('adopta');
 Route::get('/donacion', [App\Http\Controllers\HomeController::class, 'donacion'])->name('donacion');
 Route::resource('donaciones', DonacionController::class);
-
+//MIDDLEWARE SECCIONES
 
 Route::get('/cart', [CartController::class, 'cart'])->name('cart.index');
 Route::post('/add', [CartController::class, 'add'])->name('cart.store');
