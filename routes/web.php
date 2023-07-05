@@ -15,32 +15,32 @@ Route::get('', function () {
     return view('home');
 });
 
-Route::get('/home', function () {
+Route::get('inicio/home', function () {
     return view('inicio');
 });
 
-Route::get('/nosotros', function () {
+Route::get('nosotros/nosotros', function () {
     return view('nosotros');
 });
 
-Route::get('/adopta', function () {
+Route::get('adopcion/adopta', function () {
     return view('adopta');
 });
 
-Route::get('/donacion', function () {
+Route::get('donacion/donacion', function () {
     return view('donacion');
 });
 
 
-Route::get('/foros', function () {
+Route::get('foros/foros', function () {
     return view('foros');
 });
 
-Route::get('/consultas', function () {
+Route::get('consulta/consultas', function () {
     return view('consultas');
 });
 
-Route::get('/login', function () {
+Route::get('usuarios/login', function () {
     return view('login');
 });
 //RUTAS DE LAS VISTAS DE LAS MASCOTAS
