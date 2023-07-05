@@ -23,21 +23,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('/inicio/home');
     }
 
     public function shop()
     {
-        return view('shop');
+        return view('/compra/shop');
     }
 
     public function adopta()
     {
-        return view('adopta');
+        return view('/adopcion/adopta');
     }
 
     public function donacion()
     {
-        return view('donacion');
+        return view('/donacion/donacion');
     }
 }

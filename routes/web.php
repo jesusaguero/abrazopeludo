@@ -11,43 +11,43 @@ use App\Http\Controllers\AdminController;
 
 
 //RUTAS DE LAS VISTAS DE LAS MASCOTAS
-Route::get('', function () {
-    return view('home');
+Route::get('/', function () {
+    return view('/inicio/home');
 });
 
-Route::get('inicio/home', function () {
-    return view('inicio');
+Route::get('/home', function () {
+    return view('/inicio/home');
 });
 
-Route::get('nosotros/nosotros', function () {
-    return view('nosotros');
+Route::get('/nosotros', function () {
+    return view('/nosotros/nosotros');
 });
 
-Route::get('adopcion/adopta', function () {
-    return view('adopta');
+Route::get('/adopta', function () {
+    return view('/adopcion/adopta');
 });
 
-Route::get('donacion/donacion', function () {
-    return view('donacion');
+Route::get('/donacion', function () {
+    return view('/donacion/donacion');
 });
 
 
-Route::get('foros/foros', function () {
-    return view('foros');
+Route::get('/foros', function () {
+    return view('/foros/foros');
 });
 
-Route::get('consulta/consultas', function () {
-    return view('consultas');
+Route::get('/consultas', function () {
+    return view('/consulta/consultas');
 });
 
-Route::get('usuarios/login', function () {
-    return view('login');
+Route::get('/login', function () {
+    return view('/usuarios/login');
 });
 //RUTAS DE LAS VISTAS DE LAS MASCOTAS
 
 
 //LOGIN CONTROLLER
-Route::post('/login', [LoginController::class, 'login'])->name('login');
+Route::post('usuarios/login', [LoginController::class, 'login'])->name('login');
 //LOGIN CONTROLLER
 
 //SOLICITUD DE ADOPCIÓN CONTROLLER
