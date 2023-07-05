@@ -1,4 +1,5 @@
 <?php
+//RUTAS DE LOS CONTROLADORES
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SolicitudAdopcionController;
