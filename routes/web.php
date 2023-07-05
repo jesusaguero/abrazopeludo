@@ -1,10 +1,12 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SolicitudAdopcionController;
 use App\Http\Controllers\MascotaController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DonacionController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\AdminController;
+
 
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/procesar_formulario', [SolicitudAdopcionController::class, 'store'])->name('procesar.formulario');
@@ -47,6 +49,10 @@ Route::get('/login', function () {
 Route::get('/compra', function () {
     return view('compra');
 });
+
+Route::get('/admin',[AdminController::class, 'index'])
+    ->middleware('auth.admin')
+    ->name('admin.index');
 
 Route::get('/mascotas/resumen-solicitud', [SolicitudAdopcionController::class, 'mostrarResumenSolicitud'])->name('mascotas.resumen-solicitud');
 
