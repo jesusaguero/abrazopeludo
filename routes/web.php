@@ -9,7 +9,11 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\AdminController;
 //RUTAS DE LOS CONTROLADORES
 
+//LOGIN CONTROLLER
 Route::post('/login', [LoginController::class, 'login'])->name('login');
+//LOGIN CONTROLLER
+
+//SOLICITUD DE ADOPCIÓN CONTROLLER
 Route::post('/procesar_formulario', [SolicitudAdopcionController::class, 'store'])->name('procesar.formulario');
 Route::get('/descargar-resumen', [SolicitudAdopcionController::class, 'descargarResumen'])->name('descargar-resumen');
 Route::get('descargar/{id}', [SolicitudAdopcionController::class, 'descargarPDF'])->name('descargar-pdf');
