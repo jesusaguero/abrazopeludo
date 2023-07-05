@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app1')
 @section('content')
     <!-- SECCIÓN DE CONSULTAS -->
     <div class="accordion" id="preguntas-accordion">
