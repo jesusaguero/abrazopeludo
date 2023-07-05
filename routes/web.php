@@ -17,6 +17,7 @@ Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/procesar_formulario', [SolicitudAdopcionController::class, 'store'])->name('procesar.formulario');
 Route::get('/descargar-resumen', [SolicitudAdopcionController::class, 'descargarResumen'])->name('descargar-resumen');
 Route::get('descargar/{id}', [SolicitudAdopcionController::class, 'descargarPDF'])->name('descargar-pdf');
+//SOLICITUD DE ADOPCIÓN CONTROLLER
 
 Route::get('/', function () {
     return view('home');
