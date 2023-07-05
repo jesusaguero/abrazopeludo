@@ -7,6 +7,8 @@ use App\Http\Controllers\MascotaController;
 use App\Http\Controllers\DonacionController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\HomeController;
 //RUTAS DE LOS CONTROLADORES
 
 
