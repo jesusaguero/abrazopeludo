@@ -11,7 +11,7 @@ use App\Http\Controllers\AdminController;
 
 
 //RUTAS DE LAS VISTAS DE LAS MASCOTAS
-Route::get('/', function () {
+Route::get('', function () {
     return view('home');
 });
 
@@ -42,10 +42,6 @@ Route::get('/consultas', function () {
 
 Route::get('/login', function () {
     return view('login');
-});
-
-Route::get('/compra', function () {
-    return view('compra');
 });
 //RUTAS DE LAS VISTAS DE LAS MASCOTAS
 
