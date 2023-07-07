@@ -48,13 +48,13 @@ Route::get('/login', function () {
 });
 
 //Administrador rutas
-Route::get('/admin/adopciones', function () {
-    return view('adopciones');
+Route::get('/adopciones', function () {
+    return view('/admin/adopciones');
 });
-Route::get('/admin/compras', function () {
-    return view('compras');
+Route::get('/compras', function () {
+    return view('/admin/compras');
 });
-Route::get('/admin/solicitudes', function () {
+Route::get('/solicitudes', function () {
     return view('solicitudes');
 });
 //Administrador rutas
