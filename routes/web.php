@@ -75,7 +75,7 @@ Route::prefix('mascotas')->group(function () {
 });
 //FIN DE RUTAS MASCOTAS
 
-
+//INICIO DE RUTAS VERIFICADAS
 Auth::routes();
 
 Route::get('/shop', [App\Http\Controllers\CartController::class, 'shop'])->name('shop');
