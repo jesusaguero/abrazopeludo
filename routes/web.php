@@ -59,6 +59,7 @@ Route::get('/solicitudes', function () {
 });
 //FIN DE RUTAS DE ADMINISTRADOR
 
+//INICIO DE RUTAS MASCOTAS
 Route::get('/mascotas/resumen-solicitud', [SolicitudAdopcionController::class, 'mostrarResumenSolicitud'])->name('mascotas.resumen-solicitud');
 
 Route::get('/solicitudadopcion', function () {
@@ -72,7 +73,7 @@ Route::prefix('mascotas')->group(function () {
         })->name('mascotas.mascota'.$i);
     }
 });
-
+//INICIO DE RUTAS MASCOTAS
 
 
 
