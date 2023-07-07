@@ -87,6 +87,8 @@ Route::get('/donacion', [App\Http\Controllers\HomeController::class, 'donacion']
 Route::resource('donaciones', DonacionController::class);
 //FIN DE RUTAS VERIFICADAS
 
+
+//INICIO DE RUTAS CARRITO DE COMPRAS
 Route::get('/cart', [CartController::class, 'cart'])->name('cart.index');
 Route::post('/add', [CartController::class, 'add'])->name('cart.store');
 Route::post('/update', [CartController::class, 'update'])->name('cart.update');
