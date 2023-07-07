@@ -13,14 +13,13 @@
             <h4 class="my-0 font-weight-normal">Adopciones</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title"><small class="text-muted">Vistas</small></h1>
+            <h1 class="card-title pricing-card-title">Al ingresar podrás: <small class="text-muted"></small></h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li>Verificar las Adopciones</li>
               <li>Aceptar / Rechazar las Adopciones</li>
               <li>Agregar Mascotas</li>
-              <li>Help center access</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+            <button type="button" class="btn btn-lg btn-block btn-primary">Ingresar</button>
           </div>
         </div>
         <div class="card mb-4 box-shadow">
@@ -28,14 +27,14 @@
             <h4 class="my-0 font-weight-normal">Compras Online</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+            <h1 class="card-title pricing-card-title">Al ingresar podrás: <small class="text-muted"></small></h1>
             <ul class="list-unstyled mt-3 mb-4">
-              <li>20 users included</li>
-              <li>10 GB of storage</li>
-              <li>Priority email support</li>
-              <li>Help center access</li>
+              <li>Verificar las compras</li>
+              <li>Agregar Productos</li>
+              <li>Eliminar Productos</li>
+              <li>Actualizar Productos</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+            <button type="button" class="btn btn-lg btn-block btn-primary">Ingresar</button>
           </div>
         </div>
         <div class="card mb-4 box-shadow">
@@ -43,14 +42,13 @@
             <h4 class="my-0 font-weight-normal">Solicitudes de adopción</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+          <h1 class="card-title pricing-card-title">Al ingresar podrás: <small class="text-muted"></small></h1>
             <ul class="list-unstyled mt-3 mb-4">
-              <li>30 users included</li>
-              <li>15 GB of storage</li>
-              <li>Phone and email support</li>
-              <li>Help center access</li>
+              <li>Verificar las solicitudes</li>
+              <li>Aceptar las solicitudes</li>
+              <li>Rechazar las solicitudes</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+            <button type="button" class="btn btn-lg btn-block btn-primary">Ingresar</button>
           </div>
         </div>
       </div>

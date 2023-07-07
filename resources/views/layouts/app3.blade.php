@@ -43,11 +43,6 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-                <div class="navbar-nav mr-auto py-0">
-                    <a href="adopta" class="nav-item nav-link ">Adopciones</a>
-                    <a href="donacion" class="nav-item nav-link">Donaciones</a>
-                    <a href="shop" class="nav-item nav-link">Compras Online</a>
-                </div>
                 <ul class="navbar-nav ms-auto">
                     <!-- Authentication Links -->
                     @guest
