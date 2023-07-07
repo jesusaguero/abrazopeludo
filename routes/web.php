@@ -75,6 +75,8 @@ Route::prefix('mascotas')->group(function () {
 });
 //FIN DE RUTAS MASCOTAS
 
+
+
 //INICIO DE RUTAS VERIFICADAS
 Auth::routes();
 
@@ -83,7 +85,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/adopta', [App\Http\Controllers\HomeController::class, 'adopta'])->name('adopta');
 Route::get('/donacion', [App\Http\Controllers\HomeController::class, 'donacion'])->name('donacion');
 Route::resource('donaciones', DonacionController::class);
-
+//FIN DE RUTAS VERIFICADAS
 
 Route::get('/cart', [CartController::class, 'cart'])->name('cart.index');
 Route::post('/add', [CartController::class, 'add'])->name('cart.store');
