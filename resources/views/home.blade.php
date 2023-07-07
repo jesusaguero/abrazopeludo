@@ -8,29 +8,11 @@
                     <img class="w-100" src="import/img/carousel-1.jpg" alt="Image" preload="auto" loading="lazy">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h1 class="display-3 text-white mb-3">En Perú hay más de 6 MILLONES de perros sin hogar</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="import/img/carousel-2.jpg" alt="Image" preload="auto" loading="lazy">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h1 class="display-3 text-white mb-3"> Ayúdanos a construir un mundo mejor para ellos</h1>
+                            <h1 class="display-3 text-white mb-3">En Perú hay más de 6 MILLONES de mascotas sin hogar</h1>
                         </div>
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
-                <div class="btn btn-primary rounded" style="width: 45px; height: 45px;">
-                    <span class="carousel-control-prev-icon mb-n2"></span>
-                </div>
-            </a>
-            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
-                <div class="btn btn-primary rounded" style="width: 45px; height: 45px;">
-                    <span class="carousel-control-next-icon mb-n2"></span>
-                </div>
-            </a>
         </div>
     </div>
 <!-- SECCIÓN DE CARRUSEL -->
