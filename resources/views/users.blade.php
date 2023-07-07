@@ -48,7 +48,7 @@
               <li>Aceptar las solicitudes</li>
               <li>Rechazar las solicitudes</li>
             </ul>
-            <a href="/admin/adopciones" class="btn btn-lg btn-block btn-primary">Ingresar</a>
+            <a href="../adopciones" class="btn btn-lg btn-block btn-primary">Ingresar</a>
           </div>
         </div>
       </div>
