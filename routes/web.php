@@ -47,8 +47,17 @@ Route::get('/login', function () {
     return view('login');
 });
 
-
-
+//Administrador rutas
+Route::get('/admin/adopciones', function () {
+    return view('adopciones');
+});
+Route::get('/admin/compras', function () {
+    return view('compras');
+});
+Route::get('/admin/solicitudes', function () {
+    return view('solicitudes');
+});
+//Administrador rutas
 
 Route::get('/mascotas/resumen-solicitud', [SolicitudAdopcionController::class, 'mostrarResumenSolicitud'])->name('mascotas.resumen-solicitud');
 
