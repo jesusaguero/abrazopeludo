@@ -47,9 +47,8 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/compra', function () {
-    return view('compra');
-});
+
+
 
 Route::get('/mascotas/resumen-solicitud', [SolicitudAdopcionController::class, 'mostrarResumenSolicitud'])->name('mascotas.resumen-solicitud');
 
