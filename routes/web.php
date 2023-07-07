@@ -73,12 +73,10 @@ Route::prefix('mascotas')->group(function () {
         })->name('mascotas.mascota'.$i);
     }
 });
-//INICIO DE RUTAS MASCOTAS
-
+//FIN DE RUTAS MASCOTAS
 
 
 Auth::routes();
-
 
 Route::get('/shop', [App\Http\Controllers\CartController::class, 'shop'])->name('shop');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
