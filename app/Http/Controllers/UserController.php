@@ -4,19 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class UserController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('soloadmin',['only'=> ['index']]);
+        $this->middleware('solouser',['only'=> ['index']]);
     }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('home');
+        return view('users');
     }
 
     /**

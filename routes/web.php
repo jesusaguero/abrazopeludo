@@ -5,12 +5,15 @@ use App\Http\Controllers\MascotaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DonacionController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/procesar_formulario', [SolicitudAdopcionController::class, 'store'])->name('procesar.formulario');
 Route::get('/descargar-resumen', [SolicitudAdopcionController::class, 'descargarResumen'])->name('descargar-resumen');
 Route::get('descargar/{id}', [SolicitudAdopcionController::class, 'descargarPDF'])->name('descargar-pdf');
-
+Route::resource('/users', UserController::class);
+Route::resource('/home', AdminController::class);
 Route::get('/', function () {
     return view('home');
 });
@@ -80,3 +83,4 @@ Route::post('/add', [CartController::class, 'add'])->name('cart.store');
 Route::post('/update', [CartController::class, 'update'])->name('cart.update');
 Route::post('/remove', [CartController::class, 'remove'])->name('cart.remove');
 Route::post('/clear', [CartController::class, 'clear'])->name('cart.clear');
+Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
