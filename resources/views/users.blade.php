@@ -19,7 +19,7 @@
               <li>Aceptar / Rechazar las Adopciones</li>
               <li>Agregar Mascotas</li>
             </ul>
-            <a href="referencia_adopciones" class="btn btn-lg btn-block btn-primary">Ingresar</a>
+            <a href="/admin/adopciones" class="btn btn-lg btn-block btn-primary">Ingresar</a>
           </div>
         </div>
         <div class="card mb-4 box-shadow">
@@ -34,7 +34,7 @@
               <li>Eliminar Productos</li>
               <li>Actualizar Productos</li>
             </ul>
-            <a href="referencia_compras" class="btn btn-lg btn-block btn-primary">Ingresar</a>
+            <a href="/admin/compras" class="btn btn-lg btn-block btn-primary">Ingresar</a>
           </div>
         </div>
         <div class="card mb-4 box-shadow">
@@ -48,7 +48,7 @@
               <li>Aceptar las solicitudes</li>
               <li>Rechazar las solicitudes</li>
             </ul>
-            <a href="referencia_solicitudes" class="btn btn-lg btn-block btn-primary">Ingresar</a>
+            <a href="/admin/adopciones" class="btn btn-lg btn-block btn-primary">Ingresar</a>
           </div>
         </div>
       </div>
