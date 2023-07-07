@@ -2,19 +2,14 @@
 
 @section('content')
     <div class="container" style="margin-top: 80px">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Inicio</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Tienda</li>
-            </ol>
-        </nav>
         <div class="row justify-content-center">
             <div class="col-lg-12">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <h4>Productos</h4>
-                    </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <h1 class="text-center">Productos</h1>
                 </div>
+            </div>
+
                 <hr>
                 <div class="row">
                     @foreach($products as $pro)
