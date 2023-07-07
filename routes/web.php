@@ -16,12 +16,13 @@ Route::get('/descargar-resumen', [SolicitudAdopcionController::class, 'descargar
 Route::get('descargar/{id}', [SolicitudAdopcionController::class, 'descargarPDF'])->name('descargar-pdf');
 Route::resource('/users', UserController::class);
 Route::resource('/home', AdminController::class);
+
+
+//INICIO DE RUTAS DE PRINCIPALES
 Route::get('/', function () {
     return view('home');
 });
 
-
-//INICIO DE RUTAS DE PRINCIPALES
 Route::get('/home', function () {
     return view('inicio');
 });
