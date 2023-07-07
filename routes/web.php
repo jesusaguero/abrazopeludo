@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('home');
 });
 
+
+//INICIO DE RUTAS DE PRINCIPALES
 Route::get('/home', function () {
     return view('inicio');
 });
