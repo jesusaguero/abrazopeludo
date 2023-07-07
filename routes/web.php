@@ -9,14 +9,14 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 
 
-//INICIO DE RUTAS DE PRINCIPALES
+//INICIO DE RUTAS SOLICITUD DE ADOPCIÓN
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/procesar_formulario', [SolicitudAdopcionController::class, 'store'])->name('procesar.formulario');
 Route::get('/descargar-resumen', [SolicitudAdopcionController::class, 'descargarResumen'])->name('descargar-resumen');
 Route::get('descargar/{id}', [SolicitudAdopcionController::class, 'descargarPDF'])->name('descargar-pdf');
 Route::resource('/users', UserController::class);
 Route::resource('/home', AdminController::class);
-
+//FIN DE RUTAS SOLICITUD DE ADOPCIÓN
 
 //INICIO DE RUTAS DE PRINCIPALES
 Route::get('/', function () {
