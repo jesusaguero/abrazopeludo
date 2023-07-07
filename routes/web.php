@@ -46,6 +46,8 @@ Route::get('/consultas', function () {
 Route::get('/login', function () {
     return view('login');
 });
+//FIN DE RUTAS DE PRINCIPALES
+
 
 //INICIO DE RUTAS DE ADMINISTRADOR
 Route::get('/adopciones', function () {
