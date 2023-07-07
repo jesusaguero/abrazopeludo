@@ -55,7 +55,7 @@ Route::get('/compras', function () {
     return view('/admin/compras');
 });
 Route::get('/solicitudes', function () {
-    return view('solicitudes');
+    return view('/admin/solicitudes');
 });
 //Administrador rutas
 
