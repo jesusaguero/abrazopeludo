@@ -34,7 +34,6 @@ Route::get('/donacion', function () {
     return view('donacion');
 });
 
-
 Route::get('/foros', function () {
     return view('foros');
 });
