@@ -34,7 +34,7 @@
               <li>Eliminar Productos</li>
               <li>Actualizar Productos</li>
             </ul>
-            <a href="/admin/compras" class="btn btn-lg btn-block btn-primary">Ingresar</a>
+            <a href="../compras" class="btn btn-lg btn-block btn-primary">Ingresar</a>
           </div>
         </div>
         <div class="card mb-4 box-shadow">
