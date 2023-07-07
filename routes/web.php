@@ -8,6 +8,8 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 
+
+//INICIO DE RUTAS DE PRINCIPALES
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/procesar_formulario', [SolicitudAdopcionController::class, 'store'])->name('procesar.formulario');
 Route::get('/descargar-resumen', [SolicitudAdopcionController::class, 'descargarResumen'])->name('descargar-resumen');
@@ -42,10 +44,6 @@ Route::get('/foros', function () {
 
 Route::get('/consultas', function () {
     return view('consultas');
-});
-
-Route::get('/login', function () {
-    return view('login');
 });
 //FIN DE RUTAS DE PRINCIPALES
 
