@@ -6,10 +6,11 @@
             <div class="col-lg-12">
             <div class="row">
                 <div class="col-lg-7">
-                    <h1 class="text-center">Productos</h1>
+                    <a href="" class="navbar-brand d-none d-lg-block">
+                        <h1 class="m-0 display-5 text-capitalize"><span class="text-primary">Productos </span>Peludos</h1>
+                    </a>
                 </div>
             </div>
-
                 <hr>
                 <div class="row">
                     @foreach($products as $pro)
