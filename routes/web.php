@@ -35,8 +35,6 @@ Route::get('/nosotros', function () {
     return view('nosotros');
 });
 
-
-
 Route::get('/donacion', function () {
     return view('donacion');
 });
