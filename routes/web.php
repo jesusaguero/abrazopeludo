@@ -54,11 +54,10 @@ Route::get('/consultas', function () {
 //INICIO DE RUTAS DE ADMINISTRADOR
 
 Route::prefix('admin')->group(function () {
-    Route::get('/admin/adopciones', [AdopcionController::class, 'index'])->name('admin.adopciones');
-    Route::get('/admin/adopciones', [AdopcionController::class, 'index'])->name('admin.adopciones.index');
+    Route::get('/adopciones', [AdopcionController::class, 'index'])->name('admin.adopciones');
+    Route::get('/adopciones/create', [AdopcionController::class, 'create'])->name('admin.adopciones.create');
+    Route::post('/adopciones', [AdopcionController::class, 'store'])->name('admin.adopciones.store');
     Route::get('/adopciones/{id}', [AdopcionController::class, 'show'])->name('admin.adopciones.show');
-    Route::get('/admin/adopciones/create', [AdopcionController::class, 'create'])->name('admin.adopciones.create');
-    Route::post('/admin/adopciones', [AdopcionController::class, 'store'])->name('admin.adopciones.store');
     Route::get('/adopciones/{id}/edit', [AdopcionController::class, 'edit'])->name('admin.adopciones.edit');
     Route::put('/adopciones/{id}', [AdopcionController::class, 'update'])->name('admin.adopciones.update');
     Route::delete('/adopciones/{id}', [AdopcionController::class, 'destroy'])->name('admin.adopciones.destroy');

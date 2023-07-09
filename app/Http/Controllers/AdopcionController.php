@@ -10,12 +10,12 @@ class AdopcionController extends Controller
     public function index()
     {
         $mascotas = Mascota::all();
-        return view('admin.adopciones', ['mascotas' => $mascotas]);
+        return view('admin.adoptacrud.index', ['mascotas' => $mascotas]);
     }
 
     public function create()
     {
-        return view('admin.adopciones.create');
+        return view('admin.adoptacrud.create');
     }
 
     public function store(Request $request)
@@ -43,19 +43,19 @@ class AdopcionController extends Controller
         $mascota->save();
 
         // Redirigir a una página de confirmación o a la lista de mascotas
-        return redirect()->route('admin.adopciones.index')->with('success', 'Mascota creada exitosamente');
+        return redirect()->route('admin.adoptacrud.index')->with('success', 'Mascota creada exitosamente');
     }
 
     public function show($id)
     {
         $mascota = Mascota::find($id);
-        return view('admin.adopciones.show')->with('mascota', $mascota);
+        return view('admin.adoptacrud.show', ['mascota' => $mascota]);
     }
 
     public function edit($id)
     {
         $mascota = Mascota::find($id);
-        return view('admin.adopciones.edit', ['mascota' => $mascota]);
+        return view('admin.adoptacrud.edit', ['mascota' => $mascota]);
     }
 
     public function update(Request $request, $id)
@@ -71,7 +71,7 @@ class AdopcionController extends Controller
         // Guardar los cambios en la base de datos
         $mascota->save();
 
-        return redirect()->route('admin.adopciones')->with('success', 'Mascota actualizada exitosamente.');
+        return redirect()->route('admin.adoptacrud.index')->with('success', 'Mascota actualizada exitosamente.');
     }
 
     public function destroy($id)
@@ -80,6 +80,6 @@ class AdopcionController extends Controller
         // Eliminar la mascota de la base de datos
         $mascota->delete();
 
-        return redirect()->route('admin.adopciones.index')->with('success', 'Mascota eliminada exitosamente.');
+        return redirect()->route('admin.adoptacrud.index')->with('success', 'Mascota eliminada exitosamente.');
     }
 }
