@@ -62,14 +62,14 @@
     </div>
 
     <!-- Contenido principal -->
-    <div id="descripcion-vene" class="container my-5">
+    <div class="container my-5">
         <div class="row">
             <div class="col-lg-6">
-                <img src="{{ asset('import/img/mascotas/cat-2.jpg') }}" alt="Imagen de la mascota" class="img-fluid">
+                <img src="{{ asset('import/img/mascotas/mascota'.$mascota->id_mascota.'.jpg') }}" alt="Imagen de la mascota" class="img-fluid">
             </div>
             <div class="col-lg-6">
                 <h2>Descripción de la mascota</h2>
-                <p>¡Hola, mi nombre es Vene!</p>
+                <p>¡Hola, mi nombre es {{ $mascota->nombre }}!</p>
                 <p>Soy una gatita dulce y tranquila en busca de un hogar sereno. Disfruto de los momentos de relajación y las caricias suaves. Si me adoptas, seré tu compañera fiel y te llenaré de ternura. ¿Quieres compartir tu vida conmigo?</p>
                 <p>Sexo: Hembra</p>
                 <p>Tamaño: Pequeño</p>

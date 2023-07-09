@@ -62,14 +62,14 @@
     </div>
 
     <!-- Contenido principal -->
-    <div id="descripcion-simba" class="container my-5">
+    <div class="container my-5">
         <div class="row">
             <div class="col-lg-6">
-                <img src="{{ asset('import/img/mascotas/cat-1.jpg') }}" alt="Imagen de la mascota" class="img-fluid">
+                <img src="{{ asset('import/img/mascotas/mascota'.$mascota->id_mascota.'.jpg') }}" alt="Imagen de la mascota" class="img-fluid">
             </div>
             <div class="col-lg-6">
                 <h2>Descripción de la mascota</h2>
-                <p>¡Hola, mi nombre es Simba!</p>
+                <p>¡Hola, mi nombre es {{ $mascota->nombre }}!</p>
                 <p>Soy un gatito curioso y travieso en busca de un hogar lleno de cariño. Me encanta explorar y jugar con juguetes. Si me adoptas, prometo llenar tus días de diversión y ronroneos. ¿Me darías una oportunidad?</p>
                 <p>Sexo: Macho</p>
                 <p>Tamaño: Pequeño</p>

@@ -24,7 +24,7 @@
     <link href="import/lib/flaticon/font/flaticon.css" rel="stylesheet">
     <link href="import/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="import/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-    <link href="import/css/style.css" rel="stylesheet">
+    <link href="{{ asset('import/css/style.css') }}" rel="stylesheet">
     <link href="import/css/stylemessage.css" rel="stylesheet">
 </head>
 
@@ -52,13 +52,13 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                 <div class="navbar-nav mr-auto py-0">
-                    <a href="home" class="nav-item nav-link">Inicio</a>
-                    <a href="nosotros" class="nav-item nav-link">Nosotros</a>
-                    <a href="adopta" class="nav-item nav-link ">Adopta</a>
-                    <a href="donacion" class="nav-item nav-link">Donación</a>
-                    <a href="shop" class="nav-item nav-link">Compra</a>
-                    <a href="foros" class="nav-item nav-link">Foros</a>
-                    <a href="consultas" class="nav-item nav-link">Consultas</a>
+                    <a href="../home" class="nav-item nav-link">Inicio</a>
+                    <a href="../nosotros" class="nav-item nav-link">Nosotros</a>
+                    <a href="../adopta" class="nav-item nav-link ">Adopta</a>
+                    <a href="../donacion" class="nav-item nav-link">Donación</a>
+                    <a href="../shop" class="nav-item nav-link">Compra</a>
+                    <a href="../foros" class="nav-item nav-link">Foros</a>
+                    <a href="../consultas" class="nav-item nav-link">Consultas</a>
                 </div>
                 <ul class="navbar-nav ms-auto">
                     <!-- Authentication Links -->

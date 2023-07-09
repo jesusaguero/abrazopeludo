@@ -18,7 +18,7 @@
     <link href="import/lib/flaticon/font/flaticon.css" rel="stylesheet">
     <link href="import/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="import/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-    <link href="import/css/style.css" rel="stylesheet">
+    <link href="{{ asset('import/css/style.css') }}" rel="stylesheet">
     <link href="import/css/stylemessage.css" rel="stylesheet">
 </head>
 <body>

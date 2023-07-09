@@ -62,14 +62,14 @@
     </div>
 
     <!-- Contenido principal -->
-    <div id="descripcion-duque" class="container my-5">
+    <div class="container my-5">
         <div class="row">
             <div class="col-lg-6">
-                <img src="{{ asset('import/img/mascotas/dog-5.jpg') }}" alt="Imagen de la mascota" class="img-fluid">
+                <img src="{{ asset('import/img/mascotas/mascota'.$mascota->id_mascota.'.jpg') }}" alt="Imagen de la mascota" class="img-fluid">
             </div>
             <div class="col-lg-6">
                 <h2>Descripción de la mascota</h2>
-                <p>¡Hola, mi nombre es Duke!</p>
+                <p>¡Hola, mi nombre es {{ $mascota->nombre }}!</p>
                 <p>Soy un perro valiente y juguetón en busca de una familia activa. Me encanta correr, jugar a la pelota y aprender nuevos trucos. Si me adoptas, seré tu compañero perfecto para las aventuras al aire libre. ¿Estás listo para vivir emocionantes momentos juntos?</p>
                 <p>Sexo: Macho</p>
                 <p>Tamaño: Mediano</p>

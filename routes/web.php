@@ -7,6 +7,15 @@ use App\Http\Controllers\DonacionController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\SolicitudesController;
+use App\Http\Controllers\AdopcionController;
+
+Route::get('/adopta', [MascotaController::class, 'index'])->name('adopta');
+for ($i = 1; $i <= 12; $i++) {
+    Route::get('/mascotas/mascota'.$i, [MascotaController::class, 'mostrarMascota'.$i])->name('mascotas.mascota'.$i);
+}
+
+
 
 
 //INICIO DE RUTAS SOLICITUD DE ADOPCIÓN
@@ -16,6 +25,7 @@ Route::get('/descargar-resumen', [SolicitudAdopcionController::class, 'descargar
 Route::get('descargar/{id}', [SolicitudAdopcionController::class, 'descargarPDF'])->name('descargar-pdf');
 Route::resource('/users', UserController::class);
 Route::resource('/home', AdminController::class);
+Route::get('/solicitudes', [SolicitudesController::class, 'index']);
 //FIN DE RUTAS SOLICITUD DE ADOPCIÓN
 
 //INICIO DE RUTAS DE PRINCIPALES
@@ -31,9 +41,7 @@ Route::get('/nosotros', function () {
     return view('nosotros');
 });
 
-Route::get('/adopta', function () {
-    return view('adopta');
-});
+
 
 Route::get('/donacion', function () {
     return view('donacion');
@@ -50,9 +58,15 @@ Route::get('/consultas', function () {
 
 
 //INICIO DE RUTAS DE ADMINISTRADOR
-Route::get('/adopciones', function () {
-    return view('/admin/adopciones');
+
+Route::prefix('admin')->group(function () {
+    Route::get('/admin/adopciones', [AdopcionController::class, 'index'])->name('admin.adopciones');
+    Route::get('/adopciones/{id}', [AdopcionController::class, 'show'])->name('admin.adopciones.show');
+    Route::get('/adopciones/{id}/edit', [AdopcionController::class, 'edit'])->name('admin.adopciones.edit');
+    Route::put('/adopciones/{id}', [AdopcionController::class, 'update'])->name('admin.adopciones.update');
+    Route::delete('/adopciones/{id}', [AdopcionController::class, 'destroy'])->name('admin.adopciones.destroy');
 });
+
 Route::get('/compras', function () {
     return view('/admin/compras');
 });
@@ -69,13 +83,13 @@ Route::get('/solicitudadopcion', function () {
     return view('mascotas.solicitudadopcion');
 })->name('mascotas.solicitudadopcion');
 
-Route::prefix('mascotas')->group(function () {
+/*Route::prefix('mascotas')->group(function () {
     for ($i = 1; $i <= 12; $i++) {
         Route::get('/mascota'.$i, function () use ($i) {
             return view('mascotas.mascota'.$i);
         })->name('mascotas.mascota'.$i);
     }
-});
+});*/
 //FIN DE RUTAS MASCOTAS
 
 
@@ -84,7 +98,6 @@ Auth::routes();
 
 Route::get('/shop', [App\Http\Controllers\CartController::class, 'shop'])->name('shop');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/adopta', [App\Http\Controllers\HomeController::class, 'adopta'])->name('adopta');
 Route::get('/donacion', [App\Http\Controllers\HomeController::class, 'donacion'])->name('donacion');
 Route::resource('donaciones', DonacionController::class);
 //FIN DE RUTAS VERIFICADAS

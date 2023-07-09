@@ -56,20 +56,66 @@
                     <a href="../foros" class="nav-item nav-link">Foros</a>
                     <a href="../consultas" class="nav-item nav-link">Consultas</a>
                 </div>
-                <a href="" class="btn btn-lg btn-primary px-3 d-none d-lg-block">Ingresa</a>
+                <ul class="navbar-nav ms-auto">
+                    <!-- Authentication Links -->
+                    @guest
+                        @if (Route::has('login'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                        @endif
+
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            </li>
+                        @endif
+                    @else
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endguest
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <div id="app">
+            @yield('content')
+    </div>
             </div>
         </nav>
     </div>
 
     <!-- Contenido principal -->
-    <div id="descripcion-rocky" class="container my-5">
+    <div class="container my-5">
         <div class="row">
             <div class="col-lg-6">
-                <img src="{{ asset('import/img/mascotas/dog-1.jpg') }}" alt="Imagen de la mascota" class="img-fluid">
+                <img src="{{ asset('import/img/mascotas/mascota'.$mascota->id_mascota.'.jpg') }}" alt="Imagen de la mascota" class="img-fluid">
             </div>
             <div class="col-lg-6">
                 <h2>Descripción de la mascota</h2>
-                <p>¡Hola, mi nombre es Rocky!</p>
+                <p>¡Hola, mi nombre es {{ $mascota->nombre }}!</p>
                 <p>¡Soy un perrito rescatado de las calles! Aunque soy un poco tímido, te prometo que puedo llenarte de amor. Si me adoptas, recibirás un kit de regalos. ¡Anímate y sé mi familia!</p>
                 <p>Sexo: Macho</p>
                 <p>Tamaño: Mediano</p>

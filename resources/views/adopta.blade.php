@@ -5,132 +5,38 @@
 <div class="container-fluid bg-light pt-5">
     <div class="container py-5">
         <div class="d-flex flex-column text-center mb-5">
-            <h1 class="display-4 m-0"><span class="text-primary">Nuestros</span> engreidos</h1>
+            <h1 class="display-4 m-0"><span class="text-primary">Nuestros</span> engreídos</h1>
         </div>
         <div class="row pb-3">
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card text-center" style="width: 18rem;">
-                    <img class="card-img-top img-fluid" src="import/img/mascotas/dog-1.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Rocky</h5>
-                        <p class="card-text"> Rocky es un perro valiente y enérgico. Le encanta correr y jugar en el parque. Es muy leal y siempre está dispuesto a proteger a su familia.</p>
-                        <a href="{{ route('mascotas.mascota1') }}#descripcion-rocky" class="btn btn-primary">ADOPTAR</a>
+            @foreach ($mascotas as $mascota)
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card text-center" style="width: 18rem;">
+                        <img class="card-img-top img-fluid" src="{{ asset('import/img/mascotas/mascota'.$mascota->id_mascota.'.jpg') }}" alt="{{ $mascota->nombre }}">
+                        <div class="card-body">
+                            <h3 class="card-title">{{ $mascota->nombre }}</h3>
+                            <div class="rating">
+                                <p class="stars">★★★★★</p>
+                            </div>
+                            <a href="{{ route('mascotas.mascota'.$mascota->id_mascota) }}#descripcion-{{ strtolower($mascota->nombre) }}" class="btn btn-primary">ADOPTAR</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card text-center" style="width: 18rem;">
-                    <img class="card-img-top img-fluid" src="import/img/mascotas/dog-2.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Luna</h5>
-                        <p class="card-text">Luna es una perrita cariñosa y juguetona. Le encanta recibir mimos y jugar con su pelota favorita. Es muy sociable y se lleva bien con otros perros.</p>
-                        <a href="{{ route('mascotas.mascota2') }}#descripcion-luna" class="btn btn-primary">ADOPTAR</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card text-center" style="width: 18rem;">
-                    <img class="card-img-top img-fluid" src="import/img/mascotas/dog-3.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Max</h5>
-                        <p class="card-text">Max es un perro muy inteligente y obediente. Le encanta aprender nuevos trucos y realizar actividades al aire libre. Es un compañero leal y protector.</p>
-                        <a href="{{ route('mascotas.mascota3') }}#descripcion-max" class="btn btn-primary">ADOPTAR</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card text-center" style="width: 18rem;">
-                    <img class="card-img-top img-fluid" src="import/img/mascotas/dog-4.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Bella</h5>
-                        <p class="card-text">Bella es una perrita tierna y juguetona. Siempre está lista para recibir caricias y dar lamidas de amor. Le gusta pasear y explorar nuevos lugares.</p>
-                        <a href="{{ route('mascotas.mascota4') }}#descripcion-bella" class="btn btn-primary">ADOPTAR</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card text-center" style="width: 18rem;">
-                    <img class="card-img-top img-fluid" src="import/img/mascotas/dog-5.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Duke</h5>
-                        <p class="card-text">Duke es un perro atlético y enérgico. Le encanta correr largas distancias y jugar al aire libre. Es muy amigable con las personas y disfruta de la compañía.</p>
-                        <a href="{{ route('mascotas.mascota5') }}#descripcion-duque" class="btn btn-primary">ADOPTAR</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card text-center" style="width: 18rem;">
-                    <img class="card-img-top img-fluid" src="import/img/mascotas/dog-6.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Coco</h5>
-                        <p class="card-text"> Coco es una perrita pequeña y adorable. Aunque es tímida al principio, se vuelve cariñosa una vez que se siente segura. Le gusta descansar en el regazo de sus dueños.</p>
-                        <a href="{{ route('mascotas.mascota6') }}#descripcion-coco" class="btn btn-primary">ADOPTAR</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card text-center" style="width: 18rem;">
-                    <img class="card-img-top img-fluid" src="import/img/mascotas/cat-1.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Simba</h5>
-                        <p class="card-text">Simba es un gato aventurero y curioso. Siempre está explorando nuevos rincones y persiguiendo juguetes por toda la casa. Es cariñoso y le encanta que le acaricien.</p>
-                        <a href="{{ route('mascotas.mascota7') }}#descripcion-simba" class="btn btn-primary">ADOPTAR</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card text-center" style="width: 18rem;">
-                    <img class="card-img-top img-fluid" src="import/img/mascotas/cat-3.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Vene</h5>
-                        <p class="card-text">Vene es una gatita elegante y tranquila. Disfruta de largas siestas al sol y de jugar con pelotas de estambre. Es muy independiente, pero también le gusta recibir mimos.</p>
-                        <a href="{{ route('mascotas.mascota8') }}#descripcion-vene" class="btn btn-primary">ADOPTAR</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card text-center" style="width: 18rem;">
-                    <img class="card-img-top img-fluid" src="import/img/mascotas/cat-5.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Oliver</h5>
-                        <p class="card-text">Oliver es un gato inteligente y juguetón. Le gusta resolver acertijos y cazar juguetes interactivos. Es cariñoso y siempre está buscando atención y caricias.</p>
-                        <a href="{{ route('mascotas.mascota9') }}#descripcion-oliver" class="btn btn-primary">ADOPTAR</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card text-center" style="width: 18rem;">
-                    <img class="card-img-top img-fluid"src="import/img/mascotas/cat-4.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Pichu</h5>
-                        <p class="card-text">Pichu es una gatita tímida y dulce. Le gusta pasar tiempo en lugares tranquilos y acogedores. Una vez que toma confianza, se convierte en una compañera leal.</p>
-                        <a href="{{ route('mascotas.mascota10') }}#descripcion-pichu" class="btn btn-primary">ADOPTAR</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card text-center" style="width: 18rem;">
-                    <img class="card-img-top img-fluid"src="import/img/mascotas/cat-6.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Filomena</h5>
-                        <p class="card-text">Filomena es un gato atlético y aventurero. Le encanta trepar a los árboles y explorar su entorno. Es muy curioso y siempre está en busca de nuevas experiencias.</p>
-                        <a href="{{ route('mascotas.mascota11') }}#descripcion-filomena" class="btn btn-primary">ADOPTAR</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card text-center" style="width: 18rem;">
-                    <img class="card-img-top img-fluid" src="import/img/mascotas/cat-2.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Chloe</h5>
-                        <p class="card-text">Chloe es una gata cariñosa y juguetona. Le gusta jugar con pelotas y perseguir plumas. Es sociable y se lleva bien con otros animales de compañía.</p>
-                        <a href="{{ route('mascotas.mascota12') }}#descripcion-chloe" class="btn btn-primary">ADOPTAR</a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>
+<!-- Sección de Servicios -->
+
+<style>
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: orange;
+}
+</style>
+
 <!-- Sección de Servicios -->
 
 
@@ -145,7 +51,7 @@
             <div class="owl-carousel testimonial-carousel">
                 <div class="bg-light mx-3 p-4">
                     <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
-                        <img class="img-fluid" src="import/img/testimonial-1.jpg" style="width: 80px; height: 80px;" alt="">
+                        <img class="img-fluid" src="import/img/testimonios/testimonial-1.jpg" style="width: 80px; height: 80px;" alt="">
                         <div class="ml-3">
                             <h5>Juan Castañeda</h5>
                             <i>Docente</i>
@@ -155,7 +61,7 @@
                 </div>
                 <div class="bg-light mx-3 p-4">
                     <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
-                        <img class="img-fluid" src="import/img/testimonial-2.jpg" style="width: 80px; height: 80px;" alt="">
+                        <img class="img-fluid" src="import/img/testimonios/testimonial-2.jpg" style="width: 80px; height: 80px;" alt="">
                         <div class="ml-3">
                             <h5>Carlos Arango</h5>
                             <i>Estudiante</i>
@@ -165,7 +71,7 @@
                 </div>
                 <div class="bg-light mx-3 p-4">
                     <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
-                        <img class="img-fluid" src="import/img/testimonial-3.jpg" style="width: 80px; height: 80px;" alt="">
+                        <img class="img-fluid" src="import/img/testimonios/testimonial-3.jpg" style="width: 80px; height: 80px;" alt="">
                         <div class="ml-3">
                             <h5>Roberto Medina</h5>
                             <i>Ingeniero</i>
@@ -175,9 +81,9 @@
                 </div>
                 <div class="bg-light mx-3 p-4">
                     <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
-                        <img class="img-fluid" src="import/img/testimonial-4.jpg" style="width: 80px; height: 80px;" alt="">
+                        <img class="img-fluid" src="import/img/testimonios/testimonial-4.jpg" style="width: 80px; height: 80px;" alt="">
                         <div class="ml-3">
-                            <h5>Andres Bellido</h5>
+                            <h5>Edison Flores</h5>
                             <i>Futbolista</i>
                         </div>
                     </div>
