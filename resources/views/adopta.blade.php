@@ -16,8 +16,8 @@
                             <h3 class="card-title">{{ $mascota->nombre }}</h3>
                             <!-- Agrega aquí la lógica condicional para mostrar los botones -->
                             @if ($mascota->id_estado == 1)
-                                <a href="{{ route('mascotas.mascota'.$mascota->id_mascota) }}#descripcion-{{ strtolower($mascota->nombre) }}" class="btn btn-primary">ADOPTAR</a>
                                 <button class="btn btn-success">Disponible</button>
+                                <a href="{{ route('mascotas.mascota'.$mascota->id_mascota) }}#descripcion-{{ strtolower($mascota->nombre) }}" class="btn btn-primary">ADOPTAR</a>
                             @elseif ($mascota->id_estado == 2)
                                 <button class="btn btn-danger">Adoptado</button>
                                 <a href="#" class="btn btn-danger">ADOPTAR</a>

@@ -61,7 +61,9 @@ class AdopcionController extends Controller
     public function update(Request $request, $id)
     {
         $mascota = Mascota::find($id);
+
         // Actualizar los datos de la mascota según los valores del formulario ($request)
+        $mascota->id_estado = $request->input('id_estado');
         $mascota->nombre = $request->input('nombre');
         $mascota->especie = $request->input('especie');
         $mascota->raza = $request->input('raza');
