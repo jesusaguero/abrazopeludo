@@ -15,8 +15,8 @@ class AdopcionController extends Controller
 
     public function show($id)
     {
-        $adopcion = Mascota::find($id);
-        return view('admin.adopciones.show', ['adopcion' => $adopcion]);
+        $mascota = Mascota::find($id);
+        return view('admin.adopciones.show')->with('mascota', $mascota);
     }
 
     public function edit($id)
@@ -38,7 +38,7 @@ class AdopcionController extends Controller
         // Guardar los cambios en la base de datos
         $mascota->save();
 
-        return redirect()->route('admin.adopciones.index')->with('success', 'Mascota actualizada exitosamente.');
+        return redirect()->route('admin.adopciones')->with('success', 'Mascota actualizada exitosamente.');
     }
 
     public function destroy($id)
