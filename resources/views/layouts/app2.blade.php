@@ -158,7 +158,7 @@
                             <a class="text-white mb-2" href="home"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
                             <a class="text-white mb-2" href="nosotros"><i class="fa fa-angle-right mr-2"></i>Nosotros</a>
                             <a class="text-white mb-2" href="adopta"><i class="fa fa-angle-right mr-2"></i>Adopta</a>
-                            <a class="text-white mb-2" href="compra"><i class="fa fa-angle-right mr-2"></i>Compra</a>
+                            <a class="text-white mb-2" href="shop"><i class="fa fa-angle-right mr-2"></i>Compra</a>
                             <a class="text-white" href="consultas"><i class="fa fa-angle-right mr-2"></i>Consultas</a>
                         </div>
                     </div>
