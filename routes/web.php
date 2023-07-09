@@ -55,6 +55,7 @@ Route::get('/consultas', function () {
 
 Route::prefix('admin')->group(function () {
     Route::get('/admin/adopciones', [AdopcionController::class, 'index'])->name('admin.adopciones');
+    Route::get('/admin/adopciones', [AdopcionController::class, 'index'])->name('admin.adopciones.index');
     Route::get('/adopciones/{id}', [AdopcionController::class, 'show'])->name('admin.adopciones.show');
     Route::get('/admin/adopciones/create', [AdopcionController::class, 'create'])->name('admin.adopciones.create');
     Route::post('/admin/adopciones', [AdopcionController::class, 'store'])->name('admin.adopciones.store');
@@ -87,7 +88,7 @@ Route::get('/solicitudadopcion', function () {
 Auth::routes();
 
 Route::get('/adopta', [MascotaController::class, 'index'])->name('adopta');
-for ($i = 1; $i <= 12; $i++) {
+for ($i = 1; $i <= 20; $i++) {
     Route::get('/mascotas/mascota'.$i, [MascotaController::class, 'mostrarMascota'.$i])->name('mascotas.mascota'.$i);
 }
 

@@ -29,9 +29,6 @@
                             <!-- Botón para ver detalles de la adopción -->
                             <a href="{{ route('admin.adopciones.show', $mascota->id_mascota) }}" class="btn btn-info">Ver</a>
 
-                            <!-- Botón para agregar la adopción -->
-                            <a href="{{ route('admin.adopciones.create') }}" class="btn btn-success">Crear mascota</a>
-
                             <!-- Botón para editar la adopción -->
                             <a href="{{ route('admin.adopciones.edit', $mascota->id_mascota) }}" class="btn btn-primary">Editar</a>
 
@@ -46,5 +43,7 @@
                 @endforeach
             </tbody>
         </table>
+        <!-- Botón para agregar la adopción -->
+        <a href="{{ route('admin.adopciones.create') }}" class="btn btn-success">Crear mascota</a>
     </div>
 @endsection

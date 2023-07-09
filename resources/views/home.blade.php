@@ -56,14 +56,14 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
                         <h3 class="flaticon-dog display-3 font-weight-normal text-secondary mb-3"></h3>
-                        <h3 class="mb-3">Educar sobre el cuidado de mascotas:</h3>
+                        <h3 class="mb-3">Educar sobre el cuidado de mascotas</h3>
                         <p>Tenemos como objetivo educar a la comunidad sobre la responsabilidad y el cuidado adecuado de las mascotas. Esto implica proporcionar información sobre nutrición, higiene, entrenamiento y necesidades específicas de cada especie, con el fin de promover la tenencia responsable de animales.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
                         <h3 class="flaticon-vaccine display-3 font-weight-normal text-secondary mb-3"></h3>
-                        <h3 class="mb-3">Colaborar con la comunidad:</h3>
+                        <h3 class="mb-3">Colaborar con la comunidad</h3>
                         <p>Contaremos con una sección de foros con el objetivo de trabajar en conjunto para abordar el problema del abandono y la falta de hogar de las mascotas, promoviendo iniciativas de esterilización, programas de adopción y concienciación pública.</p>
                     </div>
                 </div>

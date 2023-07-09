@@ -27,6 +27,7 @@ class AdopcionController extends Controller
             'raza' => 'required|string',
             'edad' => 'required|integer',
             'genero' => 'required|string',
+            'id_estado' => 'integer', // Agrega la validación para el campo id_estado
         ]);
 
         // Crear una nueva instancia de Mascota y asignar los valores
@@ -36,6 +37,7 @@ class AdopcionController extends Controller
         $mascota->raza = $request->raza;
         $mascota->edad = $request->edad;
         $mascota->genero = $request->genero;
+        $mascota->id_estado = $request->id_estado; // Asigna el valor de id_estado
 
         // Guardar la mascota en la base de datos
         $mascota->save();

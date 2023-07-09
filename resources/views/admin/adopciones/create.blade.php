@@ -13,10 +13,6 @@
                     @csrf
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="id_mascota">ID Mascota:</label>
-                            <input type="text" name="id_mascota" class="form-control" required>
-                        </div>
-                        <div class="form-group col-md-6">
                             <label for="id_estado">ID Estado:</label>
                             <select name="id_estado" class="form-control" required>
                                 <option value="1">1</option>
