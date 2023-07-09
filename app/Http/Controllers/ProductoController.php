@@ -30,7 +30,7 @@ class ProductoController extends Controller
                 break;
         }
 
-        $producto->id_tipo = $categoria; 
+        $producto->id_tipo = $categoria;
         $estado = ($request->input('estado') === 'Disponible') ? 1 : 2;
         $producto->id_estado = $estado;
         $producto->nombre = $request->input('nombre');
