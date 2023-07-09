@@ -26,5 +26,6 @@
      </table>
     </div>
 
-    <h1>que pasa master</h1>
+    <a href="{{route('admin.donar.informeDonacion')}}" class="btn btn-success">Descargar Reporte</a>
+
 @endsection

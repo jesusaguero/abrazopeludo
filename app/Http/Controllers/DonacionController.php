@@ -6,6 +6,7 @@ use App\Models\Donacion;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class DonacionController extends Controller
 {
@@ -44,5 +45,13 @@ class DonacionController extends Controller
         $donacion = Donacion::find($id);
         $donacion->delete();
         return redirect()->back();
+    }
+
+    //Creación de PDF
+
+    public function pdf(){
+        $donaciones = Donacion::all();
+        $pdf = Pdf::loadView('admin.donar.informeDonacion', compact('donaciones'));
+        return $pdf->download('Reporte_Donación.pdf');
     }
 }

@@ -61,6 +61,8 @@ Route::prefix('admin')->group(function () {
     Route::delete('/adopciones/{id}', [AdopcionController::class, 'destroy'])->name('admin.adopciones.destroy');
 });
 
+Route::get('admin/donar/informeDonacion', [DonacionController::class, 'pdf'])->name('admin.donar.informeDonacion');
+
 Route::get('/compras', function () {
     return view('/admin/compras');
 });
