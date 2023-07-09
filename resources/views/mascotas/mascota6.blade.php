@@ -73,8 +73,8 @@
                 <p>Soy un perro cariñoso y divertido en busca de un hogar amoroso. Me encanta jugar y recibir mimos. Si me adoptas, te aseguro que cada día será una fiesta de alegría y amor. ¿Quieres ser parte de mi vida?</p>
                 <p>Sexo: Macho</p>
                 <p>Tamaño: Pequeño</p>
-                <p>Nivel de Actividad: Medio</p>
-                <p>Fecha aproximada de nacimiento: Marzo 2020</p>
+                <p>raza: {{ $mascota->raza }}</p>
+                <p>Edad: {{ $mascota->edad }} años</p>
                 <a href="{{ route('mascotas.solicitudadopcion') }}" class="btn btn-primary">Solicitar Adopción</a>
             </div>
         </div>

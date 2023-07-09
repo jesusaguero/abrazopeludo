@@ -79,4 +79,14 @@ class MascotaController extends Controller
         $mascota = Mascota::find(12);
         return view('mascotas.mascota12', ['mascota' => $mascota]);
     }
+    public function mostrarMascota13()
+    {
+        $mascota = Mascota::find(13);
+        return view('mascotas.mascota13', ['mascota' => $mascota]);
+    }
+    public function mostrarMascota14()
+    {
+        $mascota = Mascota::find(14);
+        return view('mascotas.mascota14', ['mascota' => $mascota]);
+    }
 }

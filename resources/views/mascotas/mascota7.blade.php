@@ -73,8 +73,8 @@
                 <p>Soy un gatito curioso y travieso en busca de un hogar lleno de cariño. Me encanta explorar y jugar con juguetes. Si me adoptas, prometo llenar tus días de diversión y ronroneos. ¿Me darías una oportunidad?</p>
                 <p>Sexo: Macho</p>
                 <p>Tamaño: Pequeño</p>
-                <p>Nivel de Actividad: Medio</p>
-                <p>Fecha aproximada de nacimiento: Abril 2022</p>
+                <p>raza: {{ $mascota->raza }}</p>
+                <p>Edad: {{ $mascota->edad }} años</p>
                 <a href="{{ route('mascotas.solicitudadopcion') }}" class="btn btn-primary">Solicitar Adopción</a>
             </div>
         </div>

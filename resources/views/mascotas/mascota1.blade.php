@@ -119,8 +119,8 @@
                 <p>¡Soy un perrito rescatado de las calles! Aunque soy un poco tímido, te prometo que puedo llenarte de amor. Si me adoptas, recibirás un kit de regalos. ¡Anímate y sé mi familia!</p>
                 <p>Sexo: Macho</p>
                 <p>Tamaño: Mediano</p>
-                <p>Nivel de Actividad: Medio</p>
-                <p>Fecha aprox. de nacimiento: Enero 2018</p>
+                <p>raza: {{ $mascota->raza }}</p>
+                <p>Edad: {{ $mascota->edad }} años</p>
                 <a href="{{ route('mascotas.solicitudadopcion') }}" class="btn btn-primary">Solicitar Adopción</a>
             </div>
         </div>

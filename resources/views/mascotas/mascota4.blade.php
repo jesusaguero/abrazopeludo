@@ -73,8 +73,8 @@
                 <p>Soy una perrita cariñosa y tranquila en busca de un hogar amoroso. Disfruto de los paseos suaves y de acurrucarme a tu lado. Si me adoptas, te brindaré compañía y lealtad incondicional. ¿Quieres ser mi familia?</p>
                 <p>Sexo: Hembra</p>
                 <p>Tamaño: Pequeño</p>
-                <p>Nivel de Actividad: Bajo</p>
-                <p>Fecha aproximada de nacimiento: Noviembre 2016</p>
+                <p>raza: {{ $mascota->raza }}</p>
+                <p>Edad: {{ $mascota->edad }} años</p>
                 <a href="{{ route('mascotas.solicitudadopcion') }}" class="btn btn-primary">Solicitar Adopción</a>
             </div>
         </div>

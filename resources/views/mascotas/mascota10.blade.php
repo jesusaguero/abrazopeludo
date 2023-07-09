@@ -73,8 +73,8 @@
                 <p>Soy un gatito juguetón y curioso en busca de un hogar lleno de diversión. Me encanta perseguir pelotas y trepar a los árboles. Si me adoptas, prometo llenar tu vida de travesuras y ronroneos. ¿Quieres ser mi compañero de juegos?</p>
                 <p>Sexo: Macho</p>
                 <p>Tamaño: Pequeño</p>
-                <p>Nivel de Actividad: Alto</p>
-                <p>Fecha aproximada de nacimiento: Septiembre 2020</p>
+                <p>raza: {{ $mascota->raza }}</p>
+                <p>Edad: {{ $mascota->edad }} años</p>
                 <a href="{{ route('mascotas.solicitudadopcion') }}" class="btn btn-primary">Solicitar Adopción</a>
             </div>
         </div>

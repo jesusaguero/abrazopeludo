@@ -13,8 +13,8 @@
                 <p>Soy una perrita llena de energía y alegría. Me encanta correr y jugar, por lo que sería ideal para una familia activa. Si me adoptas, estaré siempre lista para nuevas aventuras y momentos divertidos.</p>
                 <p>Sexo: Hembra</p>
                 <p>Tamaño: Pequeño</p>
-                <p>Nivel de Actividad: Alto</p>
-                <p>Fecha aprox. de nacimiento: Mayo 2019</p>
+                <p>raza: {{ $mascota->raza }}</p>
+                <p>Edad: {{ $mascota->edad }} años</p>
                 <a href="{{ route('mascotas.solicitudadopcion') }}" class="btn btn-primary">Solicitar Adopción</a>
             </div>
         </div>

@@ -73,8 +73,8 @@
                 <p>Soy un perro valiente y juguetón en busca de una familia activa. Me encanta correr, jugar a la pelota y aprender nuevos trucos. Si me adoptas, seré tu compañero perfecto para las aventuras al aire libre. ¿Estás listo para vivir emocionantes momentos juntos?</p>
                 <p>Sexo: Macho</p>
                 <p>Tamaño: Mediano</p>
-                <p>Nivel de Actividad: Alto</p>
-                <p>Fecha aproximada de nacimiento: Julio 2015</p>
+                <p>raza: {{ $mascota->raza }}</p>
+                <p>Edad: {{ $mascota->edad }} años</p>
                 <a href="{{ route('mascotas.solicitudadopcion') }}" class="btn btn-primary">Solicitar Adopción</a>
             </div>
         </div>
