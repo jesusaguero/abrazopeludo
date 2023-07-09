@@ -57,6 +57,4 @@ class CartController extends Controller
         return redirect()->route('cart.index')->with('success_msg', 'Carrito limpio!');
     }
 
- 
-
 }
