@@ -40,19 +40,19 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="dni" class="col-md-4 col-form-label text-md-end">{{ __('DNI') }}</label>
+                            <label for="dni" class="col-md-4 col-form-label text-md-end">{{ __('Celular') }}</label>
 
                             <div class="col-md-6">
-                                <input id="dni" type="double" class="form-control @error('dni') is-invalid @enderror" name="dni" value="{{ old('dni') }}" required autocomplete="dni">
+                                <input id="celular" type="double" class="form-control @error('celular') is-invalid @enderror" name="celular" value="{{ old('celular') }}" required autocomplete="celular">
 
-                                @error('dni')
+                                @error('celular')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
-                        
+
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Correo electrónico') }}</label>
 
