@@ -73,8 +73,8 @@
                 <p>Soy una gatita juguetona y cariñosa en busca de un hogar amoroso. Me encanta perseguir plumas y recibir mimos. Si me adoptas, prometo ser tu compañera leal y brindarte momentos de alegría. ¿Quieres ser mi familia?</p>
                 <p>Sexo: Hembra</p>
                 <p>Tamaño: Pequeño</p>
-                <p>Nivel de Actividad: Medio</p>
-                <p>Fecha aproximada de nacimiento: Julio 2022</p>
+                <p>raza: {{ $mascota->raza }}</p>
+                <p>Edad: {{ $mascota->edad }} años</p>
                 <a href="{{ route('mascotas.solicitudadopcion') }}" class="btn btn-primary">Solicitar Adopción</a>
             </div>
         </div>
