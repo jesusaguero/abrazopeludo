@@ -13,6 +13,37 @@ class AdopcionController extends Controller
         return view('admin.adopciones', ['mascotas' => $mascotas]);
     }
 
+    public function create()
+    {
+        return view('admin.adopciones.create');
+    }
+
+    public function store(Request $request)
+    {
+        // Validar los datos del formulario
+        $validatedData = $request->validate([
+            'nombre' => 'required|string',
+            'especie' => 'required|string',
+            'raza' => 'required|string',
+            'edad' => 'required|integer',
+            'genero' => 'required|string',
+        ]);
+
+        // Crear una nueva instancia de Mascota y asignar los valores
+        $mascota = new Mascota();
+        $mascota->nombre = $request->nombre;
+        $mascota->especie = $request->especie;
+        $mascota->raza = $request->raza;
+        $mascota->edad = $request->edad;
+        $mascota->genero = $request->genero;
+
+        // Guardar la mascota en la base de datos
+        $mascota->save();
+
+        // Redirigir a una página de confirmación o a la lista de mascotas
+        return redirect()->route('admin.adopciones.index')->with('success', 'Mascota creada exitosamente');
+    }
+
     public function show($id)
     {
         $mascota = Mascota::find($id);
