@@ -7,6 +7,7 @@
       <p class="lead">Al ingresar podrás: </p>
     </div>
 
+    
     <div class="container">
       <div class="card-deck mb-3 text-center">
         <div class="card mb-4 box-shadow">
