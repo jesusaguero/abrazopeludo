@@ -78,7 +78,7 @@ Route::prefix('mascotas')->group(function () {
 });
 //FIN DE RUTAS MASCOTAS
 
-
+//Habla causa en que estas
 //INICIO DE RUTAS VERIFICADAS
 Auth::routes();
 
