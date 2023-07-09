@@ -79,16 +79,6 @@
                     </div>
                     <p class="m-0">La adopción de mascotas es algo que todos deberíamos considerar. Hay tantos animales abandonados que necesitan un hogar. Adopté un perro hace cinco años y ha sido una experiencia gratificante ver cómo ha prosperado y se ha convertido en parte de nuestra familia</p>
                 </div>
-                <div class="bg-light mx-3 p-4">
-                    <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
-                        <img class="img-fluid" src="import/img/testimonios/testimonial-4.jpg" style="width: 80px; height: 80px;" alt="">
-                        <div class="ml-3">
-                            <h5>Edison Flores</h5>
-                            <i>Futbolista</i>
-                        </div>
-                    </div>
-                    <p class="m-0">La adopción de mascotas es una responsabilidad que todos deberíamos asumir. Adopté un conejo de un refugio y ha sido un compañero maravilloso. Es increíble ver cómo estos animales pueden traer tanta alegría a nuestras vidas.</p>
-                </div>
             </div>
         </div>
     </div>
