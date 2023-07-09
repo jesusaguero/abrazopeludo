@@ -8,4 +8,5 @@ class Mascota extends Model
 {
     protected $table = 'mascota';
     protected $primaryKey = 'id_mascota';
+    public $timestamps = false;
 }
