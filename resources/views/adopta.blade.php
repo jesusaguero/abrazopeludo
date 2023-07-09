@@ -14,10 +14,18 @@
                         <img class="card-img-top img-fluid" src="{{ asset('import/img/mascotas/mascota'.$mascota->id_mascota.'.jpg') }}" alt="{{ $mascota->nombre }}">
                         <div class="card-body">
                             <h3 class="card-title">{{ $mascota->nombre }}</h3>
+                            <!-- Agrega aquí la lógica condicional para mostrar los botones -->
+                            @if ($mascota->id_estado == 1)
+                                <a href="{{ route('mascotas.mascota'.$mascota->id_mascota) }}#descripcion-{{ strtolower($mascota->nombre) }}" class="btn btn-primary">ADOPTAR</a>
+                                <button class="btn btn-success">Disponible</button>
+                            @elseif ($mascota->id_estado == 2)
+                                <button class="btn btn-danger">Adoptado</button>
+                                <a href="#" class="btn btn-danger">ADOPTAR</a>
+                            @endif
                             <div class="rating">
                                 <p class="stars">★★★★★</p>
                             </div>
-                            <a href="{{ route('mascotas.mascota'.$mascota->id_mascota) }}#descripcion-{{ strtolower($mascota->nombre) }}" class="btn btn-primary">ADOPTAR</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -83,34 +91,4 @@
         </div>
     </div>
 <!-- Sección de Testimonios -->
-@endsection
-
-@extends('layouts.app3')
-
-@section('content')
-<div class="row mt-3">
-    <div class="col-md-6 offset-md-3">
-        <div class="card">
-            <div class="card-header text-center">
-                <h5 class="card-title" style="color: #555; font-size: 24px;">Detalles de la mascota</h5>
-            </div>
-            <div class="card-body">
-                <!-- Mostrar información de la mascota -->
-                <p><strong>Nombre:</strong> {{ $mascota->nombre }}</p>
-                <p><strong>Especie:</strong> {{ $mascota->especie }}</p>
-                <p><strong>Raza:</strong> {{ $mascota->raza }}</p>
-                <p><strong>Edad:</strong> {{ $mascota->edad }}</p>
-                <p><strong>Género:</strong> {{ $mascota->genero }}</p>
-                <!-- Agrega aquí la lógica condicional para mostrar los botones -->
-                @if ($mascota->id_estado == 1)
-                    <a href="{{ route('admin.adopciones.edit', $mascota->id_mascota) }}" class="btn btn-primary">Adoptar</a>
-                    <button class="btn btn-success">Disponible</button>
-                @elseif ($mascota->id_estado == 2)
-                    <button class="btn btn-danger">Adoptado</button>
-                    <a href="{{ route('admin.adopciones.edit', $mascota->id_mascota) }}" class="btn btn-primary">Editar</a>
-                @endif
-            </div>
-        </div>
-    </div>
-</div>
 @endsection

@@ -16,8 +16,8 @@
                     <div class="form-group">
                         <label for="id_estado">Estado:</label>
                         <select name="id_estado" class="form-control" required>
-                            <option value="1" {{ $mascota->id_estado == 1 ? 'selected' : '' }}>Disponible</option>
-                            <option value="2" {{ $mascota->id_estado == 2 ? 'selected' : '' }}>Adoptado</option>
+                            <option value="1" {{ $mascota->id_estado == 1 ? 'selected' : '' }}>1</option>
+                            <option value="2" {{ $mascota->id_estado == 2 ? 'selected' : '' }}>2</option>
                         </select>
                         <small class="form-text text-muted">1: Disponible, 2: Adoptado</small>
                     </div>
