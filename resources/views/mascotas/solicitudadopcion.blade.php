@@ -20,12 +20,6 @@
 
 
                         <div class="form-group">
-                            <label for="apellidos">Apellidos:</label>
-                            <input type="text" class="form-control" id="apellidos" name="apellidos" required>
-                        </div>
-
-
-                        <div class="form-group">
                             <label for="telefono">Teléfono:</label>
                             <input type="text" class="form-control" id="telefono" name="telefono" required>
                         </div>
@@ -39,7 +33,7 @@
 
                         <div class="form-group">
                             <label for="correo">Correo electrónico:</label>
-                            <input type="email" class="form-control" id="correo" name="correo" required>
+                            <input type="email" class="form-control" id="correo" placeholder="{{ Auth::user()->email }}" value="{{ Auth::user()->email }}" disabled>
                         </div>
 
 
