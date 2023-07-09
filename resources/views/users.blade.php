@@ -19,7 +19,7 @@
               <li>Aceptar / Rechazar las Adopciones</li>
               <li>Agregar Mascotas</li>
             </ul>
-            <a href="#" class="btn btn-lg btn-block btn-primary">Ingresar</a>
+            <a href="../donaciones" class="btn btn-lg btn-block btn-primary">Ingresar</a>
           </div>
         </div>
         <div class="card mb-4 box-shadow">
