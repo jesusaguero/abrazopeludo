@@ -21,13 +21,13 @@
 
                         <div class="form-group">
                             <label for="telefono">Teléfono:</label>
-                            <input type="text" class="form-control" id="telefono" name="telefono" required>
+                            <input type="text" class="form-control" id="celular" placeholder="{{ Auth::user()->celular }}" value="{{ Auth::user()->celular }}" disabled>
                         </div>
 
 
                         <div class="form-group">
                             <label for="dni">DNI:</label>
-                            <input type="text" class="form-control" id="dni" name="dni" required>
+                            <input type="text" class="form-control" id="dni" placeholder="{{ Auth::user()->dni }}" value="{{ Auth::user()->dni }}" disabled>
                         </div>
 
 
