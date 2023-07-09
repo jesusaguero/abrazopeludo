@@ -14,6 +14,7 @@ Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/procesar_formulario', [SolicitudAdopcionController::class, 'store'])->name('procesar.formulario');
 Route::get('/descargar-resumen', [SolicitudAdopcionController::class, 'descargarResumen'])->name('descargar-resumen');
 Route::get('descargar/{id}', [SolicitudAdopcionController::class, 'descargarPDF'])->name('descargar-pdf');
+Route::get('admin/adopciones', [DonacionController::class, 'index']);
 Route::resource('/users', UserController::class);
 Route::resource('/home', AdminController::class);
 //FIN DE RUTAS SOLICITUD DE ADOPCIÓN
@@ -50,8 +51,8 @@ Route::get('/consultas', function () {
 
 
 //INICIO DE RUTAS DE ADMINISTRADOR
-Route::get('/adopciones', function () {
-    return view('/admin/adopciones');
+Route::get('/donar', function () {
+    return view('/admin/donar');
 });
 Route::get('/compras', function () {
     return view('/admin/compras');
@@ -77,7 +78,7 @@ Route::prefix('mascotas')->group(function () {
     }
 });
 //FIN DE RUTAS MASCOTAS
-
+//HolaBro
 
 //INICIO DE RUTAS VERIFICADAS
 Auth::routes();
