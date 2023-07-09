@@ -10,12 +10,6 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SolicitudesController;
 use App\Http\Controllers\AdopcionController;
 
-Route::get('/adopta', [MascotaController::class, 'index'])->name('adopta');
-for ($i = 1; $i <= 12; $i++) {
-    Route::get('/mascotas/mascota'.$i, [MascotaController::class, 'mostrarMascota'.$i])->name('mascotas.mascota'.$i);
-}
-
-
 
 
 //INICIO DE RUTAS SOLICITUD DE ADOPCIÓN
@@ -89,6 +83,11 @@ Route::get('/solicitudadopcion', function () {
 
 //INICIO DE RUTAS VERIFICADAS
 Auth::routes();
+
+Route::get('/adopta', [MascotaController::class, 'index'])->name('adopta');
+for ($i = 1; $i <= 12; $i++) {
+    Route::get('/mascotas/mascota'.$i, [MascotaController::class, 'mostrarMascota'.$i])->name('mascotas.mascota'.$i);
+}
 
 Route::get('/shop', [App\Http\Controllers\CartController::class, 'shop'])->name('shop');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
