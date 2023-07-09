@@ -78,7 +78,7 @@ Route::prefix('mascotas')->group(function () {
     }
 });
 //FIN DE RUTAS MASCOTAS
-//HolaBro
+
 
 //INICIO DE RUTAS VERIFICADAS
 Auth::routes();
