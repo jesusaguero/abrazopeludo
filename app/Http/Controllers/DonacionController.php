@@ -11,8 +11,8 @@ class DonacionController extends Controller
 {
     public function index()
     {
-        $donacion = Donacion::all();
-        return view('donacion.acciones')->with('donaciones', $donacion);
+        $donaron = Donacion::all();
+        return view('admin.donar', compact('donaron'));
     }
 
     public function store(Request $request)

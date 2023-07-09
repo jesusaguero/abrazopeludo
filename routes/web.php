@@ -23,6 +23,7 @@ Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/procesar_formulario', [SolicitudAdopcionController::class, 'store'])->name('procesar.formulario');
 Route::get('/descargar-resumen', [SolicitudAdopcionController::class, 'descargarResumen'])->name('descargar-resumen');
 Route::get('descargar/{id}', [SolicitudAdopcionController::class, 'descargarPDF'])->name('descargar-pdf');
+Route::get('admin/adopciones', [DonacionController::class, 'index']);
 Route::resource('/users', UserController::class);
 Route::resource('/home', AdminController::class);
 Route::get('/solicitudes', [SolicitudesController::class, 'index']);
@@ -58,6 +59,7 @@ Route::get('/consultas', function () {
 
 
 //INICIO DE RUTAS DE ADMINISTRADOR
+<<<<<<< HEAD
 
 Route::prefix('admin')->group(function () {
     Route::get('/admin/adopciones', [AdopcionController::class, 'index'])->name('admin.adopciones');
@@ -65,6 +67,10 @@ Route::prefix('admin')->group(function () {
     Route::get('/adopciones/{id}/edit', [AdopcionController::class, 'edit'])->name('admin.adopciones.edit');
     Route::put('/adopciones/{id}', [AdopcionController::class, 'update'])->name('admin.adopciones.update');
     Route::delete('/adopciones/{id}', [AdopcionController::class, 'destroy'])->name('admin.adopciones.destroy');
+=======
+Route::get('/donar', function () {
+    return view('/admin/donar');
+>>>>>>> 5c46694ef025c29eabe44d6d6082f21dc39d0e72
 });
 
 Route::get('/compras', function () {
