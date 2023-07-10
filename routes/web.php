@@ -66,9 +66,17 @@ Route::get('admin/donar/informeDonacion', [DonacionController::class, 'pdf'])->n
 Route::get('/compras', function () {
     return view('/admin/compras');
 });
-Route::get('/solicitudes', function () {
-    return view('/admin/solicitudes');
+
+Route::prefix('admin')->group(function () {
+    Route::get('/solicitudes', [SolicitudController::class, 'index'])->name('admin.solicitudes');
+    Route::get('/solicitudes/create', [SolicitudController::class, 'create'])->name('admin.solicitudes.create');
+    Route::post('/solicitudes', [SolicitudController::class, 'store'])->name('admin.solicitudes.store');
+    Route::get('/solicitudes/{solicitud}', [SolicitudController::class, 'show'])->name('admin.solicitudes.show');
+    Route::get('/solicitudes/{solicitud}/edit', [SolicitudController::class, 'edit'])->name('admin.solicitudes.edit');
+    Route::put('/solicitudes/{solicitud}', [SolicitudController::class, 'update'])->name('admin.solicitudes.update');
+    Route::delete('/solicitudes/{solicitud}', [SolicitudController::class, 'destroy'])->name('admin.solicitudes.destroy');
 });
+
 //FIN DE RUTAS DE ADMINISTRADOR
 
 
