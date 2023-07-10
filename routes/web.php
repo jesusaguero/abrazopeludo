@@ -68,13 +68,13 @@ Route::get('/compras', function () {
 });
 
 Route::prefix('admin')->group(function () {
-    Route::get('/solicitudes', [SolicitudController::class, 'index'])->name('admin.solicitudes');
-    Route::get('/solicitudes/create', [SolicitudController::class, 'create'])->name('admin.solicitudes.create');
-    Route::post('/solicitudes', [SolicitudController::class, 'store'])->name('admin.solicitudes.store');
-    Route::get('/solicitudes/{solicitud}', [SolicitudController::class, 'show'])->name('admin.solicitudes.show');
-    Route::get('/solicitudes/{solicitud}/edit', [SolicitudController::class, 'edit'])->name('admin.solicitudes.edit');
-    Route::put('/solicitudes/{solicitud}', [SolicitudController::class, 'update'])->name('admin.solicitudes.update');
-    Route::delete('/solicitudes/{solicitud}', [SolicitudController::class, 'destroy'])->name('admin.solicitudes.destroy');
+    Route::get('/solicitudes', [SolicitudesController::class, 'index'])->name('admin.solicitudes');
+    Route::get('/admin/solicitudes/create', [SolicitudesController::class, 'create'])->name('admin.solicitud.create');
+    Route::post('/admin/solicitudes', [SolicitudesController::class, 'store'])->name('admin.solicitud.store');
+    Route::get('admin/solicitudes/{id}', [SolicitudesController::class, 'show'])->name('admin.solicitud.show');
+    Route::get('/admin/solicitudes/{id}/edit', [SolicitudesController::class, 'edit'])->name('admin.solicitud.edit');
+    Route::put('/admin/solicitudes/{id}', [SolicitudesController::class, 'update'])->name('admin.solicitud.update');
+    Route::delete('/admin/solicitudes/{id}', [SolicitudesController::class, 'destroy'])->name('admin.solicitud.destroy');
 });
 
 //FIN DE RUTAS DE ADMINISTRADOR

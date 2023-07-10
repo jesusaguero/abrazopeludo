@@ -11,7 +11,7 @@ class SolicitudesController extends Controller
     public function index()
     {
         $solicitudes = SolicitudAdopcion::all();
-        return view('admin.solicitud.index', ['solicitudes' => $solicitudes]);
+        return view('admin.solicitudes', ['solicitudes' => $solicitudes]);
     }
 
     public function create()
