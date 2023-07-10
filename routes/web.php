@@ -67,16 +67,6 @@ Route::get('/compras', function () {
     return view('/admin/compras');
 });
 
-Route::prefix('admin')->group(function () {
-    Route::get('/solicitudes', [SolicitudesController::class, 'index'])->name('admin.solicitudes');
-    Route::get('/admin/solicitudes/create', [SolicitudesController::class, 'create'])->name('admin.solicitud.create');
-    Route::post('/admin/solicitudes', [SolicitudesController::class, 'store'])->name('admin.solicitud.store');
-    Route::get('admin/solicitudes/{id}', [SolicitudesController::class, 'show'])->name('admin.solicitud.show');
-    Route::get('/admin/solicitudes/{id}/edit', [SolicitudesController::class, 'edit'])->name('admin.solicitud.edit');
-    Route::put('/admin/solicitudes/{id}', [SolicitudesController::class, 'update'])->name('admin.solicitud.update');
-    Route::delete('/admin/solicitudes/{id}', [SolicitudesController::class, 'destroy'])->name('admin.solicitud.destroy');
-});
-
 //FIN DE RUTAS DE ADMINISTRADOR
 
 
@@ -94,16 +84,20 @@ Route::get('/solicitudadopcion', function () {
 //INICIO DE RUTAS VERIFICADAS
 Auth::routes();
 
-Route::get('/adopta', [MascotaController::class, 'index'])->name('adopta');
-for ($i = 1; $i <= 20; $i++) {
-    Route::get('/mascotas/mascota'.$i, [MascotaController::class, 'mostrarMascota'.$i])->name('mascotas.mascota'.$i);
-}
+Route::middleware('auth')->group(function () {
+    Route::get('/adopta', [MascotaController::class, 'index'])->name('adopta');
+    for ($i = 1; $i <= 20; $i++) {
+        Route::get('/mascotas/mascota'.$i, [MascotaController::class, 'mostrarMascota'.$i])->name('mascotas.mascota'.$i);
+    }
 
-Route::get('/shop', [App\Http\Controllers\CartController::class, 'shop'])->name('shop');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/donacion', [App\Http\Controllers\HomeController::class, 'donacion'])->name('donacion');
-Route::resource('donaciones', DonacionController::class);
+    Route::get('/shop', [App\Http\Controllers\CartController::class, 'shop'])->name('shop');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/donacion', [App\Http\Controllers\HomeController::class, 'donacion'])->name('donacion');
+    Route::resource('donaciones', DonacionController::class);
+});
+
 //FIN DE RUTAS VERIFICADAS
+
 
 
 //INICIO DE RUTAS CARRITO DE COMPRAS
@@ -113,4 +107,4 @@ Route::post('/update', [CartController::class, 'update'])->name('cart.update');
 Route::post('/remove', [CartController::class, 'remove'])->name('cart.remove');
 Route::post('/clear', [CartController::class, 'clear'])->name('cart.clear');
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
-//FIN DE RUTAS CARRITO DE COMPRAS
+//FIN DE RUTAS CARRITO DE COMPRAS
