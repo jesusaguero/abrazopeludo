@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\SolicitudAdopcion;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class SolicitudesController extends Controller
 {
@@ -42,7 +41,7 @@ class SolicitudesController extends Controller
         $solicitud->save();
 
         // Redirigir a una página de confirmación o a la lista de solicitudes
-        return redirect()->route('admin.solicitud.index')->with('success', 'Solicitud de adopción creada exitosamente');
+        return redirect()->route('admin.solicitudes')->with('success', 'Solicitud de adopción creada exitosamente');
     }
 
     public function show($id)
@@ -71,7 +70,7 @@ class SolicitudesController extends Controller
         // Guardar los cambios en la base de datos
         $solicitud->save();
 
-        return redirect()->route('admin.solicitud.index')->with('success', 'Solicitud de adopción actualizada exitosamente.');
+        return redirect()->route('admin.solicitudes')->with('success', 'Solicitud de adopción actualizada exitosamente.');
     }
 
     public function destroy($id)
@@ -80,6 +79,6 @@ class SolicitudesController extends Controller
         // Eliminar la solicitud de adopción de la base de datos
         $solicitud->delete();
 
-        return redirect()->route('admin.solicitud.index')->with('success', 'Solicitud de adopción eliminada exitosamente.');
+        return redirect()->route('admin.solicitudes')->with('success', 'Solicitud de adopción eliminada exitosamente.');
     }
 }
