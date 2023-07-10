@@ -14,13 +14,32 @@
                         @csrf
                         <h2>FORMULARIO DE ADOPCIÓN DE MASCOTAS</h2>
                         <div class="form-group">
-                            <label for="nombre">Nombres:</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="{{ Auth::user()->name }}" value="{{ Auth::user()->id_usuario }}" disabled>
+                            <label for="nombres">Nombres:</label>
+                            <input type="text" class="form-control" id="nombres" name="nombres" required>
                         </div>
+
+
+                        <div class="form-group">
+                            <label for="apellidos">Apellidos:</label>
+                            <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="text" class="form-control" id="telefono" name="telefono" required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="dni">DNI:</label>
+                            <input type="text" class="form-control" id="dni" name="dni" required>
+                        </div>
+
 
                         <div class="form-group">
                             <label for="correo">Correo electrónico:</label>
-                            <input type="email" class="form-control" id="correo" placeholder="{{ Auth::user()->email }}" value="{{ Auth::user()->email }}" disabled>
+                            <input type="email" class="form-control" id="correo" name="correo" required>
                         </div>
 
 
