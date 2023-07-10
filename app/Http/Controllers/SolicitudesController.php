@@ -11,12 +11,12 @@ class SolicitudesController extends Controller
     public function index()
     {
         $solicitudes = SolicitudAdopcion::all();
-        return view('admin.adopciones.index', ['solicitudes' => $solicitudes]);
+        return view('admin.solicitud.index', ['solicitudes' => $solicitudes]);
     }
 
     public function create()
     {
-        return view('admin.adopciones.create');
+        return view('admin.solicitud.create');
     }
 
     public function store(Request $request)
@@ -42,19 +42,19 @@ class SolicitudesController extends Controller
         $solicitud->save();
 
         // Redirigir a una página de confirmación o a la lista de solicitudes
-        return redirect()->route('admin.adopciones.index')->with('success', 'Solicitud de adopción creada exitosamente');
+        return redirect()->route('admin.solicitud.index')->with('success', 'Solicitud de adopción creada exitosamente');
     }
 
     public function show($id)
     {
         $solicitud = SolicitudAdopcion::find($id);
-        return view('admin.adopciones.show', ['solicitud' => $solicitud]);
+        return view('admin.solicitud.show', ['solicitud' => $solicitud]);
     }
 
     public function edit($id)
     {
         $solicitud = SolicitudAdopcion::find($id);
-        return view('admin.adopciones.edit', ['solicitud' => $solicitud]);
+        return view('admin.solicitud.edit', ['solicitud' => $solicitud]);
     }
 
     public function update(Request $request, $id)
@@ -71,7 +71,7 @@ class SolicitudesController extends Controller
         // Guardar los cambios en la base de datos
         $solicitud->save();
 
-        return redirect()->route('admin.adopciones.index')->with('success', 'Solicitud de adopción actualizada exitosamente.');
+        return redirect()->route('admin.solicitud.index')->with('success', 'Solicitud de adopción actualizada exitosamente.');
     }
 
     public function destroy($id)
@@ -80,6 +80,6 @@ class SolicitudesController extends Controller
         // Eliminar la solicitud de adopción de la base de datos
         $solicitud->delete();
 
-        return redirect()->route('admin.adopciones.index')->with('success', 'Solicitud de adopción eliminada exitosamente.');
+        return redirect()->route('admin.solicitud.index')->with('success', 'Solicitud de adopción eliminada exitosamente.');
     }
 }

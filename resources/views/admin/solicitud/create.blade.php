@@ -8,7 +8,7 @@
                     <h5 class="card-title">Crear Solicitud de Adopción</h5>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('admin.adopciones.store') }}" method="POST">
+                    <form action="{{ route('admin.solicitud.store') }}" method="POST">
                         @csrf
                         <div class="form-group">
                             <label for="id_solicitud_adopcion">ID Solicitud de Adopción:</label>

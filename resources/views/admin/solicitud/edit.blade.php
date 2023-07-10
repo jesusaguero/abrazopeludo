@@ -8,7 +8,7 @@
                     <h5 class="card-title">Editar Solicitud de Adopción</h5>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('admin.adopciones.update', $solicitud->id_solicitud_adopcion) }}" method="POST">
+                    <form action="{{ route('admin.solicitud.update', $solicitud->id_solicitud_adopcion) }}" method="POST">
                         @csrf
                         @method('PUT')
                         <div class="form-group">
