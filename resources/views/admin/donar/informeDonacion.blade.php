@@ -46,7 +46,7 @@
   <div class="container mt-5">
   <h1 class="m-0 display-5 text-capitalize"><span class="text-primary">Abrazo</span>Peludo</h1>
     <h1 class="text-center mb-4">Reporte de Donaciones</h1>
-    <p class="text-center">Usuario: {{ Auth::user()->name }}</p>
+    <p class="text-center">Administrador: {{ Auth::user()->name }}</p>
     <table class="table table-bordered">
       <thead>
         <tr>

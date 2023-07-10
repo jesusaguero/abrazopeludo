@@ -17,7 +17,6 @@
                             <label for="nombre">Nombres:</label>
                             <input type="text" class="form-control" id="nombre" placeholder="{{ Auth::user()->name }}" value="{{ Auth::user()->id_usuario }}" disabled>
                         </div>
-                        
 
                         <div class="form-group">
                             <label for="correo">Correo electrónico:</label>

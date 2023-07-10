@@ -83,7 +83,6 @@
                             </div>
                             <div class="col-lg-10">
                                 <p class="card-text ml-4">Nombres: {{ $solicitud['nombres'] }}</p>
-                                <p class="card-text ml-4">Apellidos: {{ $solicitud['apellidos'] }}</p>
                                 <p class="card-text ml-4">Correo electrónico: {{ $solicitud['correo'] }}</p>
                                 <p class="card-text ml-4">Experiencia con mascotas: {{ $solicitud['experiencia'] }}</p>
                             </div>
