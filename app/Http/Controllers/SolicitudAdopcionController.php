@@ -47,9 +47,6 @@ class SolicitudAdopcionController extends Controller
 
         $solicitud = [
             'nombres' => $request->input('nombres'),
-            'apellidos' => $request->input('apellidos'),
-            'telefono' => $request->input('telefono'),
-            'dni' => $request->input('dni'),
             'correo' => $request->input('correo'),
             'experiencia' => $request->input('experiencia'),
         ];
