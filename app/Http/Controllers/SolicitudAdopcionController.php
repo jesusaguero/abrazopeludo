@@ -16,8 +16,8 @@ class SolicitudAdopcionController extends Controller
 
         // Generar el PDF del formulario
         $resumen = "<h1>Resumen de la solicitud:</h1>";
-        $resumen .= "<p><strong>Nombres:</strong> {$request->input('nombres')}</p>";
-        $resumen .= "<p><strong>Correo electrónico:</strong> {$request->input('correo')}</p>";
+        $resumen .= "<p><strong>Nombres:</strong>" . Auth::user()->name . "</p>";
+        $resumen .= "<p><strong>Correo electrónico:</strong>" . Auth::user()->email . "</p>";
         $resumen .= "<p><strong>Experiencia con mascotas:</strong> {$request->input('experiencia')}</p>";
 
         $options = new Options();
@@ -43,11 +43,9 @@ class SolicitudAdopcionController extends Controller
         // Almacenar el archivo PDF en el sistema de archivos
         Storage::disk('public')->put($fileName, $pdfContent);
 
-        $this->validateFormData($request);
-
         $solicitud = [
-            'nombres' => $request->input('nombres'),
-            'correo' => $request->input('correo'),
+            'nombres' => Auth::user()->name,
+            'correo' => Auth::user()->email,
             'experiencia' => $request->input('experiencia'),
         ];
 
