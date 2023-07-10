@@ -94,16 +94,20 @@ Route::get('/solicitudadopcion', function () {
 //INICIO DE RUTAS VERIFICADAS
 Auth::routes();
 
-Route::get('/adopta', [MascotaController::class, 'index'])->name('adopta');
-for ($i = 1; $i <= 20; $i++) {
-    Route::get('/mascotas/mascota'.$i, [MascotaController::class, 'mostrarMascota'.$i])->name('mascotas.mascota'.$i);
-}
+Route::middleware('auth')->group(function () {
+    Route::get('/adopta', [MascotaController::class, 'index'])->name('adopta');
+    for ($i = 1; $i <= 20; $i++) {
+        Route::get('/mascotas/mascota'.$i, [MascotaController::class, 'mostrarMascota'.$i])->name('mascotas.mascota'.$i);
+    }
 
-Route::get('/shop', [App\Http\Controllers\CartController::class, 'shop'])->name('shop');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/donacion', [App\Http\Controllers\HomeController::class, 'donacion'])->name('donacion');
-Route::resource('donaciones', DonacionController::class);
+    Route::get('/shop', [App\Http\Controllers\CartController::class, 'shop'])->name('shop');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/donacion', [App\Http\Controllers\HomeController::class, 'donacion'])->name('donacion');
+    Route::resource('donaciones', DonacionController::class);
+});
+
 //FIN DE RUTAS VERIFICADAS
+
 
 
 //INICIO DE RUTAS CARRITO DE COMPRAS
