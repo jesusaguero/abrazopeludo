@@ -17,19 +17,7 @@
                             <label for="nombre">Nombres:</label>
                             <input type="text" class="form-control" id="nombre" placeholder="{{ Auth::user()->name }}" value="{{ Auth::user()->id_usuario }}" disabled>
                         </div>
-
-
-                        <div class="form-group">
-                            <label for="telefono">Teléfono:</label>
-                            <input type="text" class="form-control" id="celular" placeholder="{{ Auth::user()->celular }}" value="{{ Auth::user()->celular }}" disabled>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="dni">DNI:</label>
-                            <input type="text" class="form-control" id="dni" placeholder="{{ Auth::user()->dni }}" value="{{ Auth::user()->dni }}" disabled>
-                        </div>
-
+                        
 
                         <div class="form-group">
                             <label for="correo">Correo electrónico:</label>
