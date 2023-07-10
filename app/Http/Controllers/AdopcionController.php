@@ -9,76 +9,79 @@ class AdopcionController extends Controller
 {
     public function index()
     {
-        $solicitudes = SolicitudAdopcion::all();
-        return view('admin.solicitud.index', ['solicitudes' => $solicitudes]);
+        $mascotas = Mascota::all();
+        return view('admin.adopciones', ['mascotas' => $mascotas]);
     }
 
     public function create()
     {
-        return view('admin.solicitud.create');
+        return view('admin.adopciones.create');
     }
 
     public function store(Request $request)
     {
         // Validar los datos del formulario
         $validatedData = $request->validate([
-            'id_solicitud_adopcion' => 'required|integer',
-            'id_users' => 'required|integer',
-            'id_mascota' => 'required|integer',
-            'id_situacion' => 'required|integer',
-            'descripcion' => 'nullable|string',
+            'nombre' => 'required|string',
+            'especie' => 'required|string',
+            'raza' => 'required|string',
+            'edad' => 'required|integer',
+            'genero' => 'required|string',
+            'id_estado' => 'integer', // Agrega la validación para el campo id_estado
         ]);
 
-        // Crear una nueva instancia de SolicitudAdopcion y asignar los valores
-        $solicitud = new SolicitudAdopcion();
-        $solicitud->id_solicitud_adopcion = $request->id_solicitud_adopcion;
-        $solicitud->id_users = $request->id_users;
-        $solicitud->id_mascota = $request->id_mascota;
-        $solicitud->id_situacion = $request->id_situacion;
-        $solicitud->descripcion = $request->descripcion;
+        // Crear una nueva instancia de Mascota y asignar los valores
+        $mascota = new Mascota();
+        $mascota->nombre = $request->nombre;
+        $mascota->especie = $request->especie;
+        $mascota->raza = $request->raza;
+        $mascota->edad = $request->edad;
+        $mascota->genero = $request->genero;
+        $mascota->id_estado = $request->id_estado; // Asigna el valor de id_estado
 
-        // Guardar la solicitud en la base de datos
-        $solicitud->save();
+        // Guardar la mascota en la base de datos
+        $mascota->save();
 
-        // Redirigir a una página de confirmación o a la lista de solicitudes
-        return redirect()->route('admin.solicitud.index')->with('success', 'Solicitud de adopción creada exitosamente');
+        // Redirigir a una página de confirmación o a la lista de mascotas
+        return redirect()->route('admin.adopciones')->with('success', 'Mascota creada exitosamente');
     }
 
     public function show($id)
     {
-        $solicitud = SolicitudAdopcion::find($id);
-        return view('admin.solicitud.show', ['solicitud' => $solicitud]);
+        $mascota = Mascota::find($id);
+        return view('admin.adopciones.show', ['mascota' => $mascota]);
     }
 
     public function edit($id)
     {
-        $solicitud = SolicitudAdopcion::find($id);
-        return view('admin.solicitud.edit', ['solicitud' => $solicitud]);
+        $mascota = Mascota::find($id);
+        return view('admin.adopciones.edit', ['mascota' => $mascota]);
     }
 
     public function update(Request $request, $id)
     {
-        $solicitud = SolicitudAdopcion::find($id);
+        $mascota = Mascota::find($id);
 
-        // Actualizar los datos de la solicitud según los valores del formulario ($request)
-        $solicitud->id_solicitud_adopcion = $request->input('id_solicitud_adopcion');
-        $solicitud->id_users = $request->input('id_users');
-        $solicitud->id_mascota = $request->input('id_mascota');
-        $solicitud->id_situacion = $request->input('id_situacion');
-        $solicitud->descripcion = $request->input('descripcion');
+        // Actualizar los datos de la mascota según los valores del formulario ($request)
+        $mascota->id_estado = $request->input('id_estado');
+        $mascota->nombre = $request->input('nombre');
+        $mascota->especie = $request->input('especie');
+        $mascota->raza = $request->input('raza');
+        $mascota->edad = $request->input('edad');
+        $mascota->genero = $request->input('genero');
 
         // Guardar los cambios en la base de datos
-        $solicitud->save();
+        $mascota->save();
 
-        return redirect()->route('admin.solicitud.index')->with('success', 'Solicitud de adopción actualizada exitosamente.');
+        return redirect()->route('admin.adopciones')->with('success', 'Mascota actualizada exitosamente.');
     }
 
     public function destroy($id)
     {
-        $solicitud = SolicitudAdopcion::find($id);
-        // Eliminar la solicitud de adopción de la base de datos
-        $solicitud->delete();
+        $mascota = Mascota::find($id);
+        // Eliminar la mascota de la base de datos
+        $mascota->delete();
 
-        return redirect()->route('admin.solicitud.index')->with('success', 'Solicitud de adopción eliminada exitosamente.');
+        return redirect()->route('admin.adopciones')->with('success', 'Mascota eliminada exitosamente.');
     }
 }
