@@ -105,9 +105,6 @@ class SolicitudAdopcionController extends Controller
     {
         $request->validate([
             'nombres' => 'required',
-            'apellidos' => 'required',
-            'telefono' => 'required',
-            'dni' => 'required',
             'correo' => 'required|email',
             'experiencia' => 'required',
         ]);
