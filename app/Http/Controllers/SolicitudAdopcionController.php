@@ -17,9 +17,6 @@ class SolicitudAdopcionController extends Controller
         // Generar el PDF del formulario
         $resumen = "<h1>Resumen de la solicitud:</h1>";
         $resumen .= "<p><strong>Nombres:</strong> {$request->input('nombres')}</p>";
-        $resumen .= "<p><strong>Apellidos:</strong> {$request->input('apellidos')}</p>";
-        $resumen .= "<p><strong>Teléfono:</strong> {$request->input('telefono')}</p>";
-        $resumen .= "<p><strong>DNI:</strong> {$request->input('dni')}</p>";
         $resumen .= "<p><strong>Correo electrónico:</strong> {$request->input('correo')}</p>";
         $resumen .= "<p><strong>Experiencia con mascotas:</strong> {$request->input('experiencia')}</p>";
 
@@ -79,9 +76,6 @@ class SolicitudAdopcionController extends Controller
 
         $resumen = "<h1 style='color: red;'>Resumen de la solicitud:</h1>";
         $resumen .= "<p style='font-size: 16px;'>Nombres: {$solicitud['nombres']}</p>";
-        $resumen .= "<p style='font-size: 16px;'>Apellidos: {$solicitud['apellidos']}</p>";
-        $resumen .= "<p style='font-size: 16px;'>Teléfono: {$solicitud['telefono']}</p>";
-        $resumen .= "<p style='font-size: 16px;'>DNI: {$solicitud['dni']}</p>";
         $resumen .= "<p style='font-size: 16px;'>Correo electrónico: {$solicitud['correo']}</p>";
         $resumen .= "<p style='font-size: 16px;'>Experiencia con mascotas: {$solicitud['experiencia']}</p>";
 
