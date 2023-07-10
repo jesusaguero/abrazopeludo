@@ -6,7 +6,7 @@
             <div class="card-header" id="pregunta-1">
                 <h2 class="mb-0">
                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#respuesta-1" aria-expanded="true" aria-controls="respuesta-1">
-                        ¿¿Cuáles son las categorías de productos que ofrecen en la compra online?
+                        ¿Cuáles son las categorías de productos que ofrecen en la compra online?
                     </button>
                 </h2>
             </div>
