@@ -51,19 +51,5 @@
             <a href="../compras" class="btn btn-lg btn-block btn-primary">Ingresar</a>
           </div>
         </div>
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Solicitudes de adopción</h4>
-          </div>
-          <div class="card-body">
-          <h1 class="card-title pricing-card-title">Al ingresar podrás: <small class="text-muted"></small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>Verificar las solicitudes</li>
-              <li>Aceptar las solicitudes</li>
-              <li>Rechazar las solicitudes</li>
-            </ul>
-            <a href="../solicitudes" class="btn btn-lg btn-block btn-primary">Ingresar</a>
-          </div>
-        </div>
       </div>
 @endsection

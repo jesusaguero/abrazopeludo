@@ -43,7 +43,10 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-                <ul class="navbar-nav ms-auto">
+            <div class="navbar-nav mr-auto py-0">
+                <a href="/" class="nav-item nav-link">Ingresar como Usuario</a>
+            </div>
+            <ul class="navbar-nav ms-auto">
                     <!-- Authentication Links -->
                     @guest
                         @if (Route::has('login'))
