@@ -77,13 +77,35 @@ class SolicitudAdopcionController extends Controller
             return redirect()->route('mascotas.resumen-solicitud');
         }
 
-        $resumen = "<h1 style='color: red;'>Resumen de la solicitud:</h1>";
-        $resumen .= "<p style='font-size: 16px;'>Nombres: {$solicitud['nombres']}</p>";
-        $resumen .= "<p style='font-size: 16px;'>Apellidos: {$solicitud['apellidos']}</p>";
-        $resumen .= "<p style='font-size: 16px;'>Teléfono: {$solicitud['telefono']}</p>";
-        $resumen .= "<p style='font-size: 16px;'>DNI: {$solicitud['dni']}</p>";
-        $resumen .= "<p style='font-size: 16px;'>Correo electrónico: {$solicitud['correo']}</p>";
-        $resumen .= "<p style='font-size: 16px;'>Experiencia con mascotas: {$solicitud['experiencia']}</p>";
+        // Cargar la imagen como datos base64
+        $imagePath = public_path('import/img/mascotas/perro3.jpg');
+        $imageData = base64_encode(file_get_contents($imagePath));
+        $imageSrc = 'data:image/jpeg;base64,' . $imageData;
+
+        // Obtener la hora actual
+        $hora = date('H:i:s');
+
+        // Crear el contenido HTML del resumen
+        $resumen = "<div style='border: 5px solid #ED6436; padding: 10px;'>";
+        $resumen .= "<div style='text-align: center;'><h1 style='color: #ED6436;'>Resumen de la solicitud:</h1></div>";
+        $resumen .= "<div style='display: flex; justify-content: center;'>";
+        $resumen .= "<div style='text-align: center;'>";
+        $resumen .= "<img src='{$imageSrc}' alt='Imagen 1' style='width: 400px;'>";
+        $resumen .= "</div>";
+        $resumen .= "<div style='margin-left: 20px;'>";
+        $resumen .= "<p style='font-size: 16px;'><strong>Nombres:</strong> {$solicitud['nombres']}</p>";
+        $resumen .= "<p style='font-size: 16px;'><strong>Apellidos:</strong> {$solicitud['apellidos']}</p>";
+        $resumen .= "<p style='font-size: 16px;'><strong>Teléfono:</strong> {$solicitud['telefono']}</p>";
+        $resumen .= "<p style='font-size: 16px;'><strong>DNI:</strong> {$solicitud['dni']}</p>";
+        $resumen .= "<p style='font-size: 16px;'><strong>Correo electrónico:</strong> {$solicitud['correo']}</p>";
+        $resumen .= "<p style='font-size: 16px;'><strong>Experiencia con mascotas:</strong> {$solicitud['experiencia']}</p>";
+        $resumen .= "</div>";
+        $resumen .= "</div>";
+        $resumen .= "<div style='text-align: right;'>";
+        $resumen .= "<p style='font-size: 16px;'>Hora: {$hora}</p>";
+        $resumen .= "</div>";
+        $resumen .= "</div>";
+
 
         $options = new Options();
         $options->set('isRemoteEnabled', true);
